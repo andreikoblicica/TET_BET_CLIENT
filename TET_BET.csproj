@@ -8,4 +8,9 @@
       <Folder Include="Tests" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="EntityFramework" Version="5.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
+    </ItemGroup>
+
 </Project>
