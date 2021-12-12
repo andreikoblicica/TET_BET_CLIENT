@@ -6,8 +6,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e604824d-6bfc-4d8d-bd14-1642145d0f42" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TET_BET.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TET_BET.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/AccountDetails.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Bet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/BetEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/BetType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/BettingTicket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Event.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Transaction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/User.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/DBAccountDetails.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/DBBet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/DBBetType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/DBBettingTicket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/DBEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/DBFootballEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/DBSport.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/DBTransaction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/DBUser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/DBUserBet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Repository/Repository" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnitOfWork/UnitOfWork" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/dataSources/b5f4fdaa-2069-4e3b-956e-88b50bf6f3a7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/dataSources/b5f4fdaa-2069-4e3b-956e-88b50bf6f3a7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/AccountDetails.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Bet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/BettingEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/BettingEventStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/BettingEventStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/Bet/Winner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballBettingEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballGameEvent/Booking.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballGameEvent/FootballGameEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballGameEvent/FootballGameEventBooking.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballGameEvent/FootballGameEventChange.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballGameEvent/FootballGameEventGoal.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballGameEvent/FootballGameEventInjury.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballMatchData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/BettingTicket.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/TET_BET_Transaction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/User.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Blog.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/ErrorViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ErrorViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +85,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../BookListMVC" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="RiderCSharpLiveTemplatesSettingsId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.TET_BET">
@@ -95,6 +133,11 @@
       <workItem from="1638468969629" duration="3278000" />
       <workItem from="1638475009406" duration="779000" />
       <workItem from="1638529147528" duration="404000" />
+      <workItem from="1639059096716" duration="1935000" />
+      <workItem from="1639234438428" duration="13343000" />
+      <workItem from="1639298902849" duration="59000" />
+      <workItem from="1639300569515" duration="3539000" />
+      <workItem from="1639328408806" duration="6841000" />
     </task>
     <servers />
   </component>
@@ -118,5 +161,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
