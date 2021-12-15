@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace TET_BET.Domain
 {
+    
     public class AccountDetails
     {
         private int userID;

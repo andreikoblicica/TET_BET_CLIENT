@@ -1,11 +1,13 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace TET_BET.Models
 {
     public class DBUser
     {
         // primary key
-        private int _userID;
-        
-        private string _userEmail;
-        private string _userPassword;
+        [Key] public int userID { get; set; }
+
+        public string userEmail { get; set; }
+        public string userPassword { get; set; }
     }
 }

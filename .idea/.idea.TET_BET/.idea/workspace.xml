@@ -6,46 +6,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e604824d-6bfc-4d8d-bd14-1642145d0f42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Domain/AccountDetails.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Bet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/BetEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/BetType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/BettingTicket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Event.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Transaction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DBAccountDetails.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DBBet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DBBetType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DBBettingTicket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DBEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DBFootballEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DBSport.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DBTransaction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DBUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DBUserBet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Repository/Repository" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnitOfWork/UnitOfWork" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/dataSources/b5f4fdaa-2069-4e3b-956e-88b50bf6f3a7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/dataSources/b5f4fdaa-2069-4e3b-956e-88b50bf6f3a7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppDBContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/dataSources/b5f4fdaa-2069-4e3b-956e-88b50bf6f3a7.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/AccountDetails.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/Bet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/BettingEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/BettingEventStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/BettingEventStatus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/Bet/Winner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballBettingEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballGameEvent/Booking.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballGameEvent/FootballGameEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballGameEvent/FootballGameEventBooking.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballGameEvent/FootballGameEventChange.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballGameEvent/FootballGameEventGoal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballGameEvent/FootballGameEventInjury.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/BettingEvents/Football/FootballMatchData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/BettingTicket.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/TET_BET_Transaction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/User.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Blog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/ErrorViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ErrorViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/AccountDetails.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/AccountDetails.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DBUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DBUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TET_BET.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TET_BET.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TET_BET.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TET_BET.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +42,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/490630622de1432a8c452c33119e98b51bfb90/35/397576cd/Microsoft.EntityFrameworkCore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5f1fb9de7956494d872cee61615d082630200/30/HttpContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21hVGdGfoa5Yf5lUhi5mBzcXBn0" />
@@ -79,13 +51,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DatabaseDriversLRU" value="sqlite&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.github.minasploit.migrationfacilitator.data_project" value="TET_BET" />
+    <property name="com.github.minasploit.migrationfacilitator.startup_project" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../BookListMVC" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="RiderCSharpLiveTemplatesSettingsId" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.TET_BET">
@@ -137,7 +111,14 @@
       <workItem from="1639234438428" duration="13343000" />
       <workItem from="1639298902849" duration="59000" />
       <workItem from="1639300569515" duration="3539000" />
-      <workItem from="1639328408806" duration="6841000" />
+      <workItem from="1639328408806" duration="7853000" />
+      <workItem from="1639339878992" duration="33000" />
+      <workItem from="1639339934055" duration="268000" />
+      <workItem from="1639340229503" duration="236000" />
+      <workItem from="1639340491331" duration="2382000" />
+      <workItem from="1639343054673" duration="4030000" />
+      <workItem from="1639484111539" duration="2103000" />
+      <workItem from="1639559551989" duration="1097000" />
     </task>
     <servers />
   </component>

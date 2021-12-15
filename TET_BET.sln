@@ -12,5 +12,6 @@ Global
 		{732BB620-8537-41EE-A783-CF1019E10A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{732BB620-8537-41EE-A783-CF1019E10A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{732BB620-8537-41EE-A783-CF1019E10A67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{732BB620-8537-41EE-A783-CF1019E10A67}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
