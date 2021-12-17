@@ -1,13 +1,16 @@
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+ 
 namespace TET_BET.Models
 {
     public class DBBetType
     {
-        // primary key
-        private int _betTypeID;
+        [Key] public int betTypeID { get; set; }
         
-        // foreign key referencing DBSport
-        private int _sportID;
+        public DBSport sport { get; set; }
         
-        private string _betTypeName;
+        public List<DBBet> betsList { get; set; }
+
+        public string betTypeName { get; set; }
     }
 }

@@ -1,18 +1,18 @@
 using System;
-using TET_BET.Entities.BettingEvents;
+using System.ComponentModel.DataAnnotations;
 
 namespace TET_BET.Models
 {
     public class DBEvent
     {
-        // primary key
-        private int _eventID;
+        [Key] public int eventID { get; set; }
+
+        public int sportID { get; set; }
+        public DBSport sport { get; set; }
         
-        // foreign key referencing DBSport
-        private int _sportID;
-        
-        private string _bettingEventLocation;
-        private DateTime _bettingEventDate;
-        private BettingEventStatus _bettingEventStatus;
+        public DBBettingEventStatus bettingEventStatus { get; set; }
+
+        public string bettingEventLocation { get; set; }
+        public DateTime bettingEventDate { get; set; }
     }
 }

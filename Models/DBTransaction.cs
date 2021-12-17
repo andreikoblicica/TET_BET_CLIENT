@@ -1,13 +1,15 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace TET_BET.Models
 {
     public class DBTransaction
     {
-        // foreign key referencing DBUser
-        private int _userID;
+        [Key] public int transactionID { get; set; }
+
+        public float transactionSum { get; set; }
+        public DateTime transactionDate { get; set; }
         
-        private float _transactionSum;
-        private DateTime _transactionDate;
+        public DBAccountDetails accountDetails { get; set; }
     }
 }

@@ -1,14 +1,19 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace TET_BET.Models
 {
     public class DBUserBet
     {
-        // primary key
-        private int _userBetID;
-        
-        // foreign key referencing DBEvent
-        private int _eventID;
+        [Key] public int userBetID { get; set; }
 
-        // foreign key referencing DBBet
-        private int _betID;
+        public int eventID { get; set; }
+        public DBEvent dbEvent { get; set; }
+
+        public int betID { get; set; }
+        public DBBet bet { get; set; }
+
+        public float oddValue { get; set; }
+        
+        public DBBettingTicket bettingTicket{ get; set; }
     }
 }

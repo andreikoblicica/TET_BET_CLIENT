@@ -1,15 +1,19 @@
 using System;
 using System.Collections.Generic;
-using TET_BET.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace TET_BET.Models
 {
     public class DBAccountDetails
     {
-        // foreign key referencing DBUser
-        private int userID;
+        [Key] public int accountDetailsID { get; set; }
+
+        public DateTime dateRegistered { get; set; }
+        public float accountBalance { get; set; }
         
-        private DateTime dateRegistered;
-        private double accountBalance;
+        public List<DBTransaction> transactionsList { get; set; }
+        public List<DBBettingTicket> bettingTicketsList { get; set; }
+        
+        public DBUser user { get; set; }
     }
 }

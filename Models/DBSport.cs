@@ -1,8 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace TET_BET.Models
 {
     public class DBSport
     {
-        private int _sportID;
-        private string _sportName;
+        [Key] public int sportID { get; set; }
+        public string sportName { get; set; }
     }
 }
