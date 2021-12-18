@@ -6,6 +6,9 @@ namespace TET_BET.Models
     {
         [Key] public int userBetID { get; set; }
 
+        public int eventLookUpID { get; set; }
+        public DBEventLookUpTable eventLookUp { get; set; }
+
         public int eventID { get; set; }
         public DBEvent dbEvent { get; set; }
 
@@ -13,7 +16,7 @@ namespace TET_BET.Models
         public DBBet bet { get; set; }
 
         public float oddValue { get; set; }
-        
-        public DBBettingTicket bettingTicket{ get; set; }
+
+        public DBBettingTicket bettingTicket { get; set; }
     }
 }

@@ -10,6 +10,7 @@ namespace TET_BET.Models
         public int sportID { get; set; }
         public DBSport sport { get; set; }
         
+        public int bettingEventStatusID { get; set; }
         public DBBettingEventStatus bettingEventStatus { get; set; }
 
         public string bettingEventLocation { get; set; }

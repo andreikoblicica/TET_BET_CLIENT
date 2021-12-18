@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TET_BET;
 
 namespace TET_BET.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211218185046_18_12_21__20_50")]
+    partial class _18_12_21__20_50
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -174,9 +176,6 @@ namespace TET_BET.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int?>("footballLeagueID")
-                        .HasColumnType("int");
-
                     b.Property<int?>("footballTeam0footballTeamID")
                         .HasColumnType("int");
 
@@ -184,8 +183,6 @@ namespace TET_BET.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("footballEventID");
-
-                    b.HasIndex("footballLeagueID");
 
                     b.HasIndex("footballTeam0footballTeamID");
 
@@ -426,10 +423,6 @@ namespace TET_BET.Migrations
 
             modelBuilder.Entity("TET_BET.Models.DBFootballEvent", b =>
                 {
-                    b.HasOne("TET_BET.Models.DBFootballLeague", "footballLeague")
-                        .WithMany()
-                        .HasForeignKey("footballLeagueID");
-
                     b.HasOne("TET_BET.Models.DBFootballTeam", "footballTeam0")
                         .WithMany()
                         .HasForeignKey("footballTeam0footballTeamID");
@@ -437,8 +430,6 @@ namespace TET_BET.Migrations
                     b.HasOne("TET_BET.Models.DBFootballTeam", "footballTeam1")
                         .WithMany()
                         .HasForeignKey("footballTeam1footballTeamID");
-
-                    b.Navigation("footballLeague");
 
                     b.Navigation("footballTeam0");
 

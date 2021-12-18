@@ -20,5 +20,8 @@ namespace TET_BET
         public DbSet<DBTransaction> DBTransaction { get; set; }
         public DbSet<DBUser> DBUser { get; set; }
         public DbSet<DBUserBet> DBUserBet { get; set; }
+        public DbSet<DBCountry> DBCountry { get; set; }
+        public DbSet<DBFootballLeague> DBFootballLeague { get; set; }
+        public DbSet<DBEventLookUpTable> DBEventLookUpTable { get; set; }
     }
 }
