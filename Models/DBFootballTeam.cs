@@ -11,6 +11,8 @@ namespace TET_BET.Models
         public string footballTeamStadiumName { get; set; }
         public string footballTeamManagerName { get; set; }
 
+        public int rapidAPIID { get; set; }
+
         public List<DBFootballPlayer> footballPlayersList { get; set; }
 
         public DBFootballLeague footballLeague { get; set; }

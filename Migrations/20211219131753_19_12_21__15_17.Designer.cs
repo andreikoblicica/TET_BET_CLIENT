@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TET_BET;
 
 namespace TET_BET.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211219131753_19_12_21__15_17")]
+    partial class _19_12_21__15_17
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -271,9 +273,6 @@ namespace TET_BET.Migrations
 
                     b.Property<string>("footballTeamStadiumName")
                         .HasColumnType("text");
-
-                    b.Property<int>("rapidAPIID")
-                        .HasColumnType("int");
 
                     b.HasKey("footballTeamID");
 

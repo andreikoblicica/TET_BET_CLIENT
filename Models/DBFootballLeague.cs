@@ -17,6 +17,8 @@ namespace TET_BET.Models
         public DBCountry country { get; set; }
 
         public int nrTeams { get; set; }
+        
+        public int rapidAPIID { get; set; }
 
         public List<DBFootballTeam> footballTeamsList { get; set; }
     }
