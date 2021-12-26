@@ -9,6 +9,17 @@ namespace TET_BET
         {
         }
 
+        public static AppDBContext GetContext()
+        {
+            string connectionstring =
+                "server = localhost; port = 3306; user = Citadin2; password = Aaladin2000-; database = TET_BET";
+
+            var optionsBuilder = new DbContextOptionsBuilder<AppDBContext>();
+            optionsBuilder.UseMySQL(connectionstring);
+
+            return new AppDBContext(optionsBuilder.Options);
+        }
+
         public DbSet<DBAccountDetails> DBAccountDetails { get; set; }
         public DbSet<DBBet> DBBet { get; set; }
         public DbSet<DBBettingEventStatus> DBBettingEventStatus { get; set; }

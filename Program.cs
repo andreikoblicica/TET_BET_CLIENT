@@ -1,11 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using TET_BET.Models;
+using TET_BET.Repositories;
 
 namespace TET_BET
 {
@@ -13,7 +10,24 @@ namespace TET_BET
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            // CreateHostBuilder(args).Build().Run();
+
+            // UserRepository userRepository = new UserRepository();
+            // userRepository.InsertNewUser(new DBUser
+            // {
+            //     userEmail = "tudor@tetbet.com",
+            //     userPassword = "1234"
+            // });
+
+            // TransactionRepository transactionRepository = new TransactionRepository();
+            // transactionRepository.insert(new DBTransaction
+            // {
+            //     accountDetailsID = 3,
+            //     transactionSum = (float) 100.2,
+            //     transactionDate = DateTime.Now
+            // });
+            
+            
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

@@ -9,3 +9,6 @@ added rapidAPIID to DBFootballLeague
 
 19_12_21__15_24
 added rapidAPIID to DBFootballTeam
+
+26_12_2021__23_52
+added int accountDetailsID to DBTransaction
