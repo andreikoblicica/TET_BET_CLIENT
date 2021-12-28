@@ -25,7 +25,7 @@ namespace TET_BET
         public DbSet<DBBettingEventStatus> DBBettingEventStatus { get; set; }
         public DbSet<DBBettingTicket> DBBettingTicket { get; set; }
         public DbSet<DBBetType> DBBetType { get; set; }
-        public DbSet<DBEvent> DBEvent { get; set; }
+        public DbSet<DBEventt> DBEventt { get; set; }
         public DbSet<DBSport> DBSport { get; set; }
         public DbSet<DBFootballEvent> DBFootballEvent { get; set; }
         public DbSet<DBTransaction> DBTransaction { get; set; }
@@ -33,6 +33,5 @@ namespace TET_BET
         public DbSet<DBUserBet> DBUserBet { get; set; }
         public DbSet<DBCountry> DBCountry { get; set; }
         public DbSet<DBFootballLeague> DBFootballLeague { get; set; }
-        public DbSet<DBEventLookUpTable> DBEventLookUpTable { get; set; }
     }
 }

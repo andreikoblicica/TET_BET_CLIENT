@@ -9,8 +9,8 @@ using TET_BET;
 namespace TET_BET.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20211218185341_18_12_21__20_55")]
-    partial class _18_12_21__20_55
+    [Migration("20211228153733_28_12_2021__17_37")]
+    partial class _28_12_2021__17_37
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -122,14 +122,17 @@ namespace TET_BET.Migrations
                     b.Property<string>("countryName")
                         .HasColumnType("text");
 
+                    b.Property<string>("rapidAPICode")
+                        .HasColumnType("text");
+
                     b.HasKey("countryID");
 
                     b.ToTable("DBCountry");
                 });
 
-            modelBuilder.Entity("TET_BET.Models.DBEvent", b =>
+            modelBuilder.Entity("TET_BET.Models.DBEventt", b =>
                 {
-                    b.Property<int>("eventID")
+                    b.Property<int>("eventtID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -145,29 +148,13 @@ namespace TET_BET.Migrations
                     b.Property<int>("sportID")
                         .HasColumnType("int");
 
-                    b.HasKey("eventID");
+                    b.HasKey("eventtID");
 
                     b.HasIndex("bettingEventStatusID");
 
                     b.HasIndex("sportID");
 
-                    b.ToTable("DBEvent");
-                });
-
-            modelBuilder.Entity("TET_BET.Models.DBEventLookUpTable", b =>
-                {
-                    b.Property<int>("eventLookUpID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int?>("footballEventID")
-                        .HasColumnType("int");
-
-                    b.HasKey("eventLookUpID");
-
-                    b.HasIndex("footballEventID");
-
-                    b.ToTable("DBEventLookUpTable");
+                    b.ToTable("DBEventt");
                 });
 
             modelBuilder.Entity("TET_BET.Models.DBFootballEvent", b =>
@@ -176,22 +163,42 @@ namespace TET_BET.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<int>("eventtID")
+                        .HasColumnType("int");
+
                     b.Property<int?>("footballLeagueID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("footballTeam0footballTeamID")
+                    b.Property<int>("footballTeam0ID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("footballTeam1footballTeamID")
+                    b.Property<int>("footballTeam1ID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("goalsTeam0FirstHalf")
+                        .HasColumnType("int");
+
+                    b.Property<int>("goalsTeam0SecondHalf")
+                        .HasColumnType("int");
+
+                    b.Property<int>("goalsTeam1FirstHalf")
+                        .HasColumnType("int");
+
+                    b.Property<int>("goalsTeam1SecondHalf")
+                        .HasColumnType("int");
+
+                    b.Property<int>("rapidAPIFixtureID")
                         .HasColumnType("int");
 
                     b.HasKey("footballEventID");
 
+                    b.HasIndex("eventtID");
+
                     b.HasIndex("footballLeagueID");
 
-                    b.HasIndex("footballTeam0footballTeamID");
+                    b.HasIndex("footballTeam0ID");
 
-                    b.HasIndex("footballTeam1footballTeamID");
+                    b.HasIndex("footballTeam1ID");
 
                     b.ToTable("DBFootballEvent");
                 });
@@ -209,6 +216,9 @@ namespace TET_BET.Migrations
                         .HasColumnType("text");
 
                     b.Property<int>("nrTeams")
+                        .HasColumnType("int");
+
+                    b.Property<int>("rapidAPIID")
                         .HasColumnType("int");
 
                     b.Property<int>("season")
@@ -268,6 +278,9 @@ namespace TET_BET.Migrations
                     b.Property<string>("footballTeamStadiumName")
                         .HasColumnType("text");
 
+                    b.Property<int>("rapidAPIID")
+                        .HasColumnType("int");
+
                     b.HasKey("footballTeamID");
 
                     b.HasIndex("footballLeagueID");
@@ -295,7 +308,7 @@ namespace TET_BET.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int?>("accountDetailsID")
+                    b.Property<int>("accountDetailsID")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("transactionDate")
@@ -343,16 +356,10 @@ namespace TET_BET.Migrations
                     b.Property<int>("betID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("bettingTicketID")
+                    b.Property<int>("bettingTicketID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("dbEventeventID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("eventID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("eventLookUpID")
+                    b.Property<int>("footballEventID")
                         .HasColumnType("int");
 
                     b.Property<float>("oddValue")
@@ -364,9 +371,7 @@ namespace TET_BET.Migrations
 
                     b.HasIndex("bettingTicketID");
 
-                    b.HasIndex("dbEventeventID");
-
-                    b.HasIndex("eventLookUpID");
+                    b.HasIndex("footballEventID");
 
                     b.ToTable("DBUserBet");
                 });
@@ -398,7 +403,7 @@ namespace TET_BET.Migrations
                     b.Navigation("accountDetails");
                 });
 
-            modelBuilder.Entity("TET_BET.Models.DBEvent", b =>
+            modelBuilder.Entity("TET_BET.Models.DBEventt", b =>
                 {
                     b.HasOne("TET_BET.Models.DBBettingEventStatus", "bettingEventStatus")
                         .WithMany()
@@ -417,28 +422,31 @@ namespace TET_BET.Migrations
                     b.Navigation("sport");
                 });
 
-            modelBuilder.Entity("TET_BET.Models.DBEventLookUpTable", b =>
-                {
-                    b.HasOne("TET_BET.Models.DBFootballEvent", "footballEvent")
-                        .WithMany()
-                        .HasForeignKey("footballEventID");
-
-                    b.Navigation("footballEvent");
-                });
-
             modelBuilder.Entity("TET_BET.Models.DBFootballEvent", b =>
                 {
+                    b.HasOne("TET_BET.Models.DBEventt", "eventt")
+                        .WithMany()
+                        .HasForeignKey("eventtID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("TET_BET.Models.DBFootballLeague", "footballLeague")
                         .WithMany()
                         .HasForeignKey("footballLeagueID");
 
                     b.HasOne("TET_BET.Models.DBFootballTeam", "footballTeam0")
                         .WithMany()
-                        .HasForeignKey("footballTeam0footballTeamID");
+                        .HasForeignKey("footballTeam0ID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("TET_BET.Models.DBFootballTeam", "footballTeam1")
                         .WithMany()
-                        .HasForeignKey("footballTeam1footballTeamID");
+                        .HasForeignKey("footballTeam1ID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("eventt");
 
                     b.Navigation("footballLeague");
 
@@ -496,7 +504,9 @@ namespace TET_BET.Migrations
                 {
                     b.HasOne("TET_BET.Models.DBAccountDetails", "accountDetails")
                         .WithMany("transactionsList")
-                        .HasForeignKey("accountDetailsID");
+                        .HasForeignKey("accountDetailsID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("accountDetails");
                 });
@@ -522,15 +532,13 @@ namespace TET_BET.Migrations
 
                     b.HasOne("TET_BET.Models.DBBettingTicket", "bettingTicket")
                         .WithMany("bettingTicketBetsList")
-                        .HasForeignKey("bettingTicketID");
+                        .HasForeignKey("bettingTicketID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("TET_BET.Models.DBEvent", "dbEvent")
+                    b.HasOne("TET_BET.Models.DBFootballEvent", "footballEvent")
                         .WithMany()
-                        .HasForeignKey("dbEventeventID");
-
-                    b.HasOne("TET_BET.Models.DBEventLookUpTable", "eventLookUp")
-                        .WithMany()
-                        .HasForeignKey("eventLookUpID")
+                        .HasForeignKey("footballEventID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -538,9 +546,7 @@ namespace TET_BET.Migrations
 
                     b.Navigation("bettingTicket");
 
-                    b.Navigation("dbEvent");
-
-                    b.Navigation("eventLookUp");
+                    b.Navigation("footballEvent");
                 });
 
             modelBuilder.Entity("TET_BET.Models.DBAccountDetails", b =>

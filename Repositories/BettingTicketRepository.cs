@@ -17,7 +17,7 @@ namespace TET_BET.Repositories
             _dbContext = _genericRepositoryActions.GetAppDBContext();
         }
 
-        public void InsertBettingTicket(DBEvent dbEvent)
+        public void InsertBettingTicket(DBEventt dbEventt)
         {
             AppDBContext dbContext = _genericRepositoryActions.GetAppDBContext();
 
@@ -38,7 +38,7 @@ namespace TET_BET.Repositories
             //     }
             // };
 
-            dbContext.DBEvent.Add(dbEvent);
+            dbContext.DBEventt.Add(dbEventt);
 
             dbContext.SaveChanges();
         }
