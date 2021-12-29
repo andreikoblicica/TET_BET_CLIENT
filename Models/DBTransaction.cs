@@ -9,7 +9,8 @@ namespace TET_BET.Models
 
         public float transactionSum { get; set; }
         public DateTime transactionDate { get; set; }
-        
+
+        public int accountDetailsID { get; set; }
         public DBAccountDetails accountDetails { get; set; }
     }
 }

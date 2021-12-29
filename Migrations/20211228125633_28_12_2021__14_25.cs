@@ -4,7 +4,7 @@ using MySql.EntityFrameworkCore.Metadata;
 
 namespace TET_BET.Migrations
 {
-    public partial class _18_12_21__20_50 : Migration
+    public partial class _28_12_2021__14_25 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -42,7 +42,8 @@ namespace TET_BET.Migrations
                 {
                     countryID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    countryName = table.Column<string>(type: "text", nullable: true)
+                    countryName = table.Column<string>(type: "text", nullable: true),
+                    rapidAPICode = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -91,7 +92,7 @@ namespace TET_BET.Migrations
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     transactionSum = table.Column<float>(type: "float", nullable: false),
                     transactionDate = table.Column<DateTime>(type: "datetime", nullable: false),
-                    accountDetailsID = table.Column<int>(type: "int", nullable: true)
+                    accountDetailsID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -101,7 +102,7 @@ namespace TET_BET.Migrations
                         column: x => x.accountDetailsID,
                         principalTable: "DBAccountDetails",
                         principalColumn: "accountDetailsID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -146,10 +147,10 @@ namespace TET_BET.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "DBEvent",
+                name: "DBEventt",
                 columns: table => new
                 {
-                    eventID = table.Column<int>(type: "int", nullable: false)
+                    eventtID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     sportID = table.Column<int>(type: "int", nullable: false),
                     bettingEventStatusID = table.Column<int>(type: "int", nullable: false),
@@ -158,15 +159,15 @@ namespace TET_BET.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DBEvent", x => x.eventID);
+                    table.PrimaryKey("PK_DBEventt", x => x.eventtID);
                     table.ForeignKey(
-                        name: "FK_DBEvent_DBBettingEventStatus_bettingEventStatusID",
+                        name: "FK_DBEventt_DBBettingEventStatus_bettingEventStatusID",
                         column: x => x.bettingEventStatusID,
                         principalTable: "DBBettingEventStatus",
                         principalColumn: "bettingEventStatusID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_DBEvent_DBSport_sportID",
+                        name: "FK_DBEventt_DBSport_sportID",
                         column: x => x.sportID,
                         principalTable: "DBSport",
                         principalColumn: "sportID",
@@ -183,7 +184,8 @@ namespace TET_BET.Migrations
                     leagueName = table.Column<string>(type: "text", nullable: true),
                     sportID = table.Column<int>(type: "int", nullable: false),
                     countryID = table.Column<int>(type: "int", nullable: false),
-                    nrTeams = table.Column<int>(type: "int", nullable: false)
+                    nrTeams = table.Column<int>(type: "int", nullable: false),
+                    rapidAPIID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -231,6 +233,7 @@ namespace TET_BET.Migrations
                     footballTeamName = table.Column<string>(type: "text", nullable: true),
                     footballTeamStadiumName = table.Column<string>(type: "text", nullable: true),
                     footballTeamManagerName = table.Column<string>(type: "text", nullable: true),
+                    rapidAPIID = table.Column<int>(type: "int", nullable: false),
                     footballLeagueID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -250,24 +253,38 @@ namespace TET_BET.Migrations
                 {
                     footballEventID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    footballTeam0footballTeamID = table.Column<int>(type: "int", nullable: true),
-                    footballTeam1footballTeamID = table.Column<int>(type: "int", nullable: true)
+                    eventtID = table.Column<int>(type: "int", nullable: false),
+                    footballTeam0ID = table.Column<int>(type: "int", nullable: false),
+                    footballTeam1ID = table.Column<int>(type: "int", nullable: false),
+                    footballLeagueID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_DBFootballEvent", x => x.footballEventID);
                     table.ForeignKey(
-                        name: "FK_DBFootballEvent_DBFootballTeam_footballTeam0footballTeamID",
-                        column: x => x.footballTeam0footballTeamID,
-                        principalTable: "DBFootballTeam",
-                        principalColumn: "footballTeamID",
+                        name: "FK_DBFootballEvent_DBEventt_eventtID",
+                        column: x => x.eventtID,
+                        principalTable: "DBEventt",
+                        principalColumn: "eventtID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DBFootballEvent_DBFootballLeague_footballLeagueID",
+                        column: x => x.footballLeagueID,
+                        principalTable: "DBFootballLeague",
+                        principalColumn: "footballLeagueID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_DBFootballEvent_DBFootballTeam_footballTeam1footballTeamID",
-                        column: x => x.footballTeam1footballTeamID,
+                        name: "FK_DBFootballEvent_DBFootballTeam_footballTeam0ID",
+                        column: x => x.footballTeam0ID,
                         principalTable: "DBFootballTeam",
                         principalColumn: "footballTeamID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DBFootballEvent_DBFootballTeam_footballTeam1ID",
+                        column: x => x.footballTeam1ID,
+                        principalTable: "DBFootballTeam",
+                        principalColumn: "footballTeamID",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -298,36 +315,15 @@ namespace TET_BET.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "DBEventLookUpTable",
-                columns: table => new
-                {
-                    eventLookUpID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    footballEventID = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_DBEventLookUpTable", x => x.eventLookUpID);
-                    table.ForeignKey(
-                        name: "FK_DBEventLookUpTable_DBFootballEvent_footballEventID",
-                        column: x => x.footballEventID,
-                        principalTable: "DBFootballEvent",
-                        principalColumn: "footballEventID",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "DBUserBet",
                 columns: table => new
                 {
                     userBetID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    eventLookUpID = table.Column<int>(type: "int", nullable: false),
-                    eventID = table.Column<int>(type: "int", nullable: false),
-                    dbEventeventID = table.Column<int>(type: "int", nullable: true),
+                    footballEventID = table.Column<int>(type: "int", nullable: false),
                     betID = table.Column<int>(type: "int", nullable: false),
                     oddValue = table.Column<float>(type: "float", nullable: false),
-                    bettingTicketID = table.Column<int>(type: "int", nullable: true)
+                    bettingTicketID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -343,18 +339,12 @@ namespace TET_BET.Migrations
                         column: x => x.bettingTicketID,
                         principalTable: "DBBettingTicket",
                         principalColumn: "bettingTicketID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_DBUserBet_DBEvent_dbEventeventID",
-                        column: x => x.dbEventeventID,
-                        principalTable: "DBEvent",
-                        principalColumn: "eventID",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_DBUserBet_DBEventLookUpTable_eventLookUpID",
-                        column: x => x.eventLookUpID,
-                        principalTable: "DBEventLookUpTable",
-                        principalColumn: "eventLookUpID",
+                        name: "FK_DBUserBet_DBFootballEvent_footballEventID",
+                        column: x => x.footballEventID,
+                        principalTable: "DBFootballEvent",
+                        principalColumn: "footballEventID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -374,29 +364,34 @@ namespace TET_BET.Migrations
                 column: "sportID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DBEvent_bettingEventStatusID",
-                table: "DBEvent",
+                name: "IX_DBEventt_bettingEventStatusID",
+                table: "DBEventt",
                 column: "bettingEventStatusID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DBEvent_sportID",
-                table: "DBEvent",
+                name: "IX_DBEventt_sportID",
+                table: "DBEventt",
                 column: "sportID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DBEventLookUpTable_footballEventID",
-                table: "DBEventLookUpTable",
-                column: "footballEventID");
+                name: "IX_DBFootballEvent_eventtID",
+                table: "DBFootballEvent",
+                column: "eventtID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DBFootballEvent_footballTeam0footballTeamID",
+                name: "IX_DBFootballEvent_footballLeagueID",
                 table: "DBFootballEvent",
-                column: "footballTeam0footballTeamID");
+                column: "footballLeagueID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DBFootballEvent_footballTeam1footballTeamID",
+                name: "IX_DBFootballEvent_footballTeam0ID",
                 table: "DBFootballEvent",
-                column: "footballTeam1footballTeamID");
+                column: "footballTeam0ID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DBFootballEvent_footballTeam1ID",
+                table: "DBFootballEvent",
+                column: "footballTeam1ID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_DBFootballLeague_countryID",
@@ -445,14 +440,9 @@ namespace TET_BET.Migrations
                 column: "bettingTicketID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DBUserBet_dbEventeventID",
+                name: "IX_DBUserBet_footballEventID",
                 table: "DBUserBet",
-                column: "dbEventeventID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_DBUserBet_eventLookUpID",
-                table: "DBUserBet",
-                column: "eventLookUpID");
+                column: "footballEventID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -476,10 +466,7 @@ namespace TET_BET.Migrations
                 name: "DBBettingTicket");
 
             migrationBuilder.DropTable(
-                name: "DBEvent");
-
-            migrationBuilder.DropTable(
-                name: "DBEventLookUpTable");
+                name: "DBFootballEvent");
 
             migrationBuilder.DropTable(
                 name: "DBBetType");
@@ -488,13 +475,13 @@ namespace TET_BET.Migrations
                 name: "DBAccountDetails");
 
             migrationBuilder.DropTable(
-                name: "DBBettingEventStatus");
-
-            migrationBuilder.DropTable(
-                name: "DBFootballEvent");
+                name: "DBEventt");
 
             migrationBuilder.DropTable(
                 name: "DBFootballTeam");
+
+            migrationBuilder.DropTable(
+                name: "DBBettingEventStatus");
 
             migrationBuilder.DropTable(
                 name: "DBFootballLeague");

@@ -12,5 +12,7 @@ namespace TET_BET.Models
         public List<DBBet> betsList { get; set; }
 
         public string betTypeName { get; set; }
+        
+        public int rapidAPIBetID{ get; set; }
     }
 }
