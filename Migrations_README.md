@@ -11,3 +11,6 @@ goalsTeam1FirstHalf
 goalsTeam0SecondHalf 
 goalsTeam1SecondHalf 
 to DBFootballEvent
+
+28_12_2021__18_11
+added rapidAPIBetID to DBBetType

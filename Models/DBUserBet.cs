@@ -16,5 +16,7 @@ namespace TET_BET.Models
 
         public int bettingTicketID { get; set; }
         public DBBettingTicket bettingTicket { get; set; }
+        
+        public bool isWinner{ get; set; }
     }
 }

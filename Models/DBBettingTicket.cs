@@ -14,5 +14,7 @@ namespace TET_BET.Models
         public DateTime bettingTicketDate { get; set; }
         
         public DBAccountDetails accountDetails { get; set; }
+        
+        public bool isWinner{ get; set; }
     }
 }

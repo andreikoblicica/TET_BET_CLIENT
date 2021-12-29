@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TET_BET;
 
 namespace TET_BET.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211228161201_28_12_2021__18_11")]
+    partial class _28_12_2021__18_11
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -106,9 +108,6 @@ namespace TET_BET.Migrations
 
                     b.Property<float>("bettingTicketSum")
                         .HasColumnType("float");
-
-                    b.Property<bool>("isWinner")
-                        .HasColumnType("tinyint(1)");
 
                     b.HasKey("bettingTicketID");
 
@@ -365,9 +364,6 @@ namespace TET_BET.Migrations
 
                     b.Property<int>("footballEventID")
                         .HasColumnType("int");
-
-                    b.Property<bool>("isWinner")
-                        .HasColumnType("tinyint(1)");
 
                     b.Property<float>("oddValue")
                         .HasColumnType("float");
