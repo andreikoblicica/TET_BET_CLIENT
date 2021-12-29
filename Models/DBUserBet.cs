@@ -12,8 +12,6 @@ namespace TET_BET.Models
         public int betID { get; set; }
         public DBBet bet { get; set; }
 
-        public float oddValue { get; set; }
-
         public int bettingTicketID { get; set; }
         public DBBettingTicket bettingTicket { get; set; }
         
