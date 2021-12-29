@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TET_BET.Models
 {
-    public class DBEvent
+    public class DBEventt
     {
-        [Key] public int eventID { get; set; }
-
+        [Key] public int eventtID { get; set; }
+        
         public int sportID { get; set; }
         public DBSport sport { get; set; }
         

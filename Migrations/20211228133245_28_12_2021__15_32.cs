@@ -2,13 +2,13 @@
 
 namespace TET_BET.Migrations
 {
-    public partial class _19_12_21__15_24 : Migration
+    public partial class _28_12_2021__15_32 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<int>(
-                name: "rapidAPIID",
-                table: "DBFootballTeam",
+                name: "rapidAPIFixtureID",
+                table: "DBFootballEvent",
                 type: "int",
                 nullable: false,
                 defaultValue: 0);
@@ -17,8 +17,8 @@ namespace TET_BET.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "rapidAPIID",
-                table: "DBFootballTeam");
+                name: "rapidAPIFixtureID",
+                table: "DBFootballEvent");
         }
     }
 }

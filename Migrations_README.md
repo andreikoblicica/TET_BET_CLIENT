@@ -1,11 +1,16 @@
-18_12_21__20_55
-first migration
+28_12_2021__14_25
+first migration -> refactored db schema
 
-19_12_21__13_13
-added rapidAPICode to DBCountry
+28_12_2021__15_32
+added fixtureID to DBFootballEvent
 
-19_12_21__15_17
-added rapidAPIID to DBFootballLeague
+28_12_2021__17_37
+added
+goalsTeam0FirstHalf 
+goalsTeam1FirstHalf 
+goalsTeam0SecondHalf 
+goalsTeam1SecondHalf 
+to DBFootballEvent
 
-19_12_21__15_24
-added rapidAPIID to DBFootballTeam
+28_12_2021__18_11
+added rapidAPIBetID to DBBetType
