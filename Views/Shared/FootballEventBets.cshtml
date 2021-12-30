@@ -1,0 +1,31 @@
+@model dynamic
+
+@using TET_BET.Models
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+    var footballEvent = ViewData["football_event"] as DBFootballEvent;
+    var bets = ViewData["bets_list"] as List<DBBetType>;
+}
+
+<div class="text-center">
+    <h1>@footballEvent.footballTeam0.footballTeamName - @footballEvent.footballTeam1.footballTeamName</h1>
+    <p>@footballEvent.eventt.bettingEventLocation, @footballEvent.eventt.bettingEventDate</p>
+</div>
+
+<div class="text-left">
+    @for (var i = 0; i < @bets.Count; i++)
+    {
+        <h4>@bets.ElementAt(i).betTypeName</h4>
+        <div class="row">
+          @for (var j = 0; j < @bets.ElementAt(i).betsList.Count; j++)
+          {
+              <div class="col">
+                  <button type="button" class="btn btn-info btn-lg btn-block"><span style="float:left;">@bets.ElementAt(i).betsList.ElementAt(j).betName</span><span style="float:right;"><b>@bets.ElementAt(i).betsList.ElementAt(j).oddValue</b></span> </button>
+              </div>
+          }
+        </div>                                  
+    }
+    
+</div>
+

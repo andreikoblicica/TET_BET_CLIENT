@@ -25,5 +25,7 @@ namespace TET_BET.Models
         public int goalsTeam1FirstHalf { get; set; }
         public int goalsTeam0SecondHalf { get; set; }
         public int goalsTeam1SecondHalf { get; set; }
+        
+        public List<DBBet> bets { get; set; }
     }
 }

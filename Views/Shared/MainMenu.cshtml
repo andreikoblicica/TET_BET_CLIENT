@@ -1,0 +1,53 @@
+@model dynamic
+
+@using TET_BET.Models
+@{
+    var matches = ViewData["matches"] as List<DBFootballEvent>;
+}
+
+<div class="container-fluid">  
+    <div class="row">
+        <div class="col-2">
+            <h5>Filter options</h5>
+        </div>
+        <div class="col-8">
+            <h3>Matches</h3>  
+            <div class="list-group">  
+                @for (var i = 0; i < @matches.Count; i++)
+                {
+                    <div class="list-group-item">
+ 
+                            <span style="float:left;">
+                                @matches.ElementAt(i).eventt.bettingEventDate.Hour:@matches.ElementAt(i).eventt.bettingEventDate.Minute
+                                @matches.ElementAt(i).eventt.bettingEventDate.Day/@matches.ElementAt(i).eventt.bettingEventDate.Month
+                                &nbsp;&nbsp;
+                            </span> 
+                            <span style="float:left;">
+                                <a href="#">
+                                    @matches.ElementAt(i).footballTeam0.footballTeamName - @matches.ElementAt(i).footballTeam1.footballTeamName
+                                </a>
+                            </span>
+                            <span style="float:right;">
+                                <div class="row">
+                                    <div class="col"><button type="button" class="btn btn-info">1&nbsp;&nbsp;<b>3.32</b></button></div>
+                                    <div class="col"><button type="button" class="btn btn-info">X&nbsp;&nbsp;<b>4.13</b></button></div>
+                                    <div class="col"><button type="button" class="btn btn-info">2&nbsp;&nbsp;<b>1.75</b></button></div>
+                                </div>
+                            </span>
+                    </div>    
+                }
+
+            </div>  
+        </div>
+        <div class="col-2">
+            <h5>Current bet</h5>
+            <div class="list-group">
+                <div class="list-group-item">
+                    
+                </div>
+            </div>
+            </div>
+    @Html.ActionLink("Match Example", "FootballEventBets", "FootballEventBets", null, new {@class = "page-scroll"})
+</div></div>
+
+

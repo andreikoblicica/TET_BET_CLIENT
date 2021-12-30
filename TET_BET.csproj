@@ -13,12 +13,17 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         <PrivateAssets>all</PrivateAssets>
       </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.8" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         <PrivateAssets>all</PrivateAssets>
       </PackageReference>
       <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.8" />
       <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Controllers\FootballEventBetsControllerController.cs" />
     </ItemGroup>
 
 </Project>
