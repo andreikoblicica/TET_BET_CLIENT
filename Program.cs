@@ -10,7 +10,7 @@ namespace TET_BET
     {
         public static void Main(string[] args)
         {
-            // CreateHostBuilder(args).Build().Run();
+             CreateHostBuilder(args).Build().Run();
 
             // UserRepository userRepository = new UserRepository();
             // userRepository.InsertNewUser(new DBUser
