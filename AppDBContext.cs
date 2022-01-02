@@ -33,5 +33,6 @@ namespace TET_BET
         public DbSet<DBUserBet> DBUserBet { get; set; }
         public DbSet<DBCountry> DBCountry { get; set; }
         public DbSet<DBFootballLeague> DBFootballLeague { get; set; }
+        public DbSet<DBFootballEventBet> DBFootballEventBet { get; set; }
     }
 }
