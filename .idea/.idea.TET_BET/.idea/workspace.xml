@@ -6,325 +6,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e604824d-6bfc-4d8d-bd14-1642145d0f42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Models/DBBettingEventStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/.signature.p7s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/bootstrap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-grid.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-grid.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-grid.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-grid.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-reboot.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-reboot.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-reboot.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-utilities.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-utilities.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-utilities.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-utilities.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-utilities.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-utilities.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-utilities.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Content/bootstrap.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Scripts/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Scripts/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Scripts/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Scripts/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Scripts/bootstrap.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Scripts/bootstrap.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Scripts/bootstrap.esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Scripts/bootstrap.esm.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Scripts/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Scripts/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Scripts/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/content/Scripts/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-grid.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-grid.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-grid.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-reboot.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-utilities.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-utilities.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-utilities.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-utilities.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-utilities.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/css/bootstrap.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.esm.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/.signature.p7s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/bootstrap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_accordion.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_alert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_badge.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_breadcrumb.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_button-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_carousel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_close.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_containers.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_dropdown.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_helpers.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_images.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_list-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_modal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_nav.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_navbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_offcanvas.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_placeholders.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_popover.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_progress.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_reboot.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_root.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_spinners.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_tables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_toasts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_tooltip.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_transitions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_type.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/bootstrap-grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/bootstrap-reboot.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/bootstrap-utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/forms/_floating-labels.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/forms/_form-check.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/forms/_form-control.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/forms/_form-range.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/forms/_form-select.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/forms/_form-text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/forms/_input-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/forms/_labels.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/forms/_validation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/helpers/_clearfix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/helpers/_colored-links.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/helpers/_position.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/helpers/_ratio.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/helpers/_stacks.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/helpers/_stretched-link.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/helpers/_text-truncation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/helpers/_visually-hidden.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/helpers/_vr.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_alert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_backdrop.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_border-radius.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_box-shadow.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_breakpoints.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_caret.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_clearfix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_color-scheme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_container.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_deprecate.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_gradients.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_image.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_list-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_lists.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_reset-text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_resize.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_table-variants.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_text-truncate.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_transition.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/mixins/_visually-hidden.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/utilities/_api.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Content/bootstrap/vendor/_rfs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Scripts/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Scripts/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Scripts/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Scripts/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Scripts/bootstrap.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Scripts/bootstrap.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Scripts/bootstrap.esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Scripts/bootstrap.esm.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Scripts/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Scripts/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Scripts/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/content/Scripts/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.esm.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_accordion.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_alert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_badge.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_breadcrumb.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_button-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_carousel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_close.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_containers.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_dropdown.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_helpers.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_images.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_list-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_modal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_nav.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_navbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_offcanvas.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_placeholders.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_popover.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_progress.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_reboot.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_root.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_spinners.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_tables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_toasts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_tooltip.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_transitions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_type.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/bootstrap-grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/bootstrap-reboot.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/bootstrap-utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/forms/_floating-labels.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/forms/_form-check.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/forms/_form-control.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/forms/_form-range.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/forms/_form-select.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/forms/_form-text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/forms/_input-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/forms/_labels.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/forms/_validation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/helpers/_clearfix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/helpers/_colored-links.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/helpers/_position.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/helpers/_ratio.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/helpers/_stacks.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/helpers/_stretched-link.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/helpers/_text-truncation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/helpers/_visually-hidden.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/helpers/_vr.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_alert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_backdrop.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_border-radius.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_box-shadow.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_breakpoints.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_caret.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_clearfix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_color-scheme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_container.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_deprecate.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_gradients.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_image.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_list-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_lists.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_reset-text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_resize.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_table-variants.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_text-truncate.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_transition.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/mixins/_visually-hidden.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/utilities/_api.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.sass.5.1.2/contentFiles/any/any/wwwroot/scss/vendor/_rfs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/AccountController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Shared/Account.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/dataSources/b78d7c48-a5f9-4be9-8173-cf4ab09147fc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/dataSources/b78d7c48-a5f9-4be9-8173-cf4ab09147fc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppDBContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/AccountDetails.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Bet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/BetEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/BetType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/BettingTicket.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Event.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Transaction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/User.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20211214102543_InitialCreate.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20211214102543_InitialCreate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20211215100722_InitialCreate0.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20211215100722_InitialCreate0.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/AppDBContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/BettingEventStatus.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Blog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DBAccountDetails.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DBAccountDetails.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DBBet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DBBet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DBBetType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DBBetType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/FootballEventBetsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/FootballEventBetsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/MainMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/MainMenuController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/DBBettingTicket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DBBettingTicket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DBEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DBEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DBFootballEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DBFootballEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DBSport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DBSport.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DBTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DBTransaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DBUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DBUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/DBUserBet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DBUserBet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/FootballEventBets.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/FootballEventBets.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/MainMenu.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/MainMenu.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,10 +40,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/490630622de1432a8c452c33119e98b51bfb90/35/397576cd/Microsoft.EntityFrameworkCore.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5f1fb9de7956494d872cee61615d082630200/30/HttpContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21hVGdGfoa5Yf5lUhi5mBzcXBn0" />
   <component name="ProjectViewState">
@@ -433,6 +121,10 @@
       <workItem from="1639570189798" duration="5637000" />
       <workItem from="1639686063488" duration="11614000" />
       <workItem from="1639762722374" duration="1626000" />
+      <workItem from="1641123163293" duration="33153000" />
+      <workItem from="1641207612531" duration="4701000" />
+      <workItem from="1641214272695" duration="371000" />
+      <workItem from="1641219711885" duration="8801000" />
     </task>
     <servers />
   </component>

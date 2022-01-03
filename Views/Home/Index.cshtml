@@ -2,23 +2,26 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-sm">
-            One of three columns
-        </div>
-        <div class="col-sm">
-            One of three columns
-        </div>
-        <div class="col-sm">
-            One of three columns
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+    </div>
+    <br/><br/>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <input type="text" class="form-control" placeholder="email"><br/>
+            <input type="password" class="form-control" placeholder="password"><br/>
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-block btn-info" 
+                            onclick="location.href='@Url.Action("MainMenu", "MainMenu")'">Log In</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-block btn-info">Sign Up</button>
+
+                </div>
+            </div>
         </div>
     </div>
-    @* <a href="../../Pages/FootballEventBets/FootballEventBets.cshtml"> sadsdsadsadsfsdf</a> *@
-    @Html.ActionLink("Log In","MainMenu","MainMenu", null, new { @class = "page-scroll" })
 </div>

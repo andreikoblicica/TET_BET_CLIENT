@@ -16,5 +16,22 @@ namespace TET_BET.Models
         public DBAccountDetails accountDetails { get; set; }
         
         public bool isWinner{ get; set; }
+        public bool isClosed { get; set; }
+
+        public float CalculateProfit()
+        {
+            if (isWinner) return (CalculateOdds() - 1) * bettingTicketSum;
+            else return 0;
+        }
+        public float CalculateOdds()
+        {
+            float odds = 1;
+            foreach (DBUserBet bet in bettingTicketBetsList)
+            {
+                odds *= bet.bet.oddValue;
+            }
+
+            return odds;
+        }
     }
 }
