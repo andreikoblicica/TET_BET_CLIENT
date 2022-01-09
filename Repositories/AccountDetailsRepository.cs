@@ -27,5 +27,6 @@ namespace TET_BET.Repositories
 
             return dbAccountDetails.accountDetailsID;
         }
+        
     }
 }
