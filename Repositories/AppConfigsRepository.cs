@@ -1,23 +1,12 @@
 using System.Collections.Generic;
-using TET_BET.Models;
 
 namespace TET_BET.Repositories
 {
-    public class BettingTicketRepository : IBasicCrud
+    public class AppConfigsRepository : IBasicCrud
     {
-        private readonly GenericRepositoryActions _genericRepositoryActions;
-        private readonly AppDBContext _dbContext;
-
-        public BettingTicketRepository()
-        {
-            _genericRepositoryActions = new GenericRepositoryActions();
-            _dbContext = _genericRepositoryActions.GetAppDBContext();
-        }
-
         public void Insert(object objectToInsert)
         {
-            _dbContext.DBEventt.Add((DBEventt) objectToInsert);
-            _dbContext.SaveChanges();
+            throw new System.NotImplementedException();
         }
 
         public List<object> SelectAll()
