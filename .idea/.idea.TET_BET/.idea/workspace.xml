@@ -6,10 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e604824d-6bfc-4d8d-bd14-1642145d0f42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Service/User/Account.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/AccountDetailsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/AccountDetailsRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +30,14 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///home/citadin/Documents/Facultate/Projects/TET_BET_CLIENT/Views/Shared/FootballEventBets.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/490630622de1432a8c452c33119e98b51bfb90/35/397576cd/Microsoft.EntityFrameworkCore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/citadin/Documents/Facultate/Projects/TET_BET_CLIENT/Controllers/FootballEventBetsController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/citadin/Documents/Facultate/Projects/TET_BET_CLIENT/Controllers/FootballEventBetsController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/citadin/Documents/Facultate/Projects/TET_BET_CLIENT/Views/Shared/FootballEventBets.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5f1fb9de7956494d872cee61615d082630200/30/HttpContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21hVGdGfoa5Yf5lUhi5mBzcXBn0" />
   <component name="ProjectViewState">
