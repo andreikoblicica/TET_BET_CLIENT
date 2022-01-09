@@ -6,13 +6,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e604824d-6bfc-4d8d-bd14-1642145d0f42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Service/UserActions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Service/User/Exceptions/UserDoesNotExistException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Service/User/Login.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Service/User/UserActions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TET_BET/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/FootballEventBetsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/FootballEventBetsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/IBasicCrud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/IBasicCrud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/TransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/TransactionRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Shared/FootballEventBets.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/FootballEventBets.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Shared/MainMenu.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/MainMenu.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/UserActions.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

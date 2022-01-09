@@ -2,8 +2,8 @@ using System;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using TET_BET.Models;
-using TET_BET.Repositories;
 using TET_BET.Service;
+using TET_BET.Service.User;
 
 namespace TET_BET
 {
@@ -11,22 +11,8 @@ namespace TET_BET
     {
         public static void Main(string[] args)
         {
+            // asta da drumu la aplicatie, o comentam ca sa ne testam serviciile
             // CreateHostBuilder(args).Build().Run();
-
-            UserActions userActions = new UserActions();
-            userActions.CreateUser(new DBUser
-            {
-                userEmail = "andrei@tetbet.com",
-                userPassword = "5678"
-            });
-
-            // TransactionRepository transactionRepository = new TransactionRepository();
-            // transactionRepository.insert(new DBTransaction
-            // {
-            //     accountDetailsID = 3,
-            //     transactionSum = (float) 100.2,
-            //     transactionDate = DateTime.Now
-            // });
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
