@@ -1,0 +1,121 @@
+@* @{ *@
+@*     var tickets = ViewData["tickets"] as List<DBBettingTicket>; *@
+@*     var transactions = ViewData["transactions"] as List<DBTransaction>; *@
+@* } *@
+@* *@
+@* <div class="text-center"> *@
+@*     <h1>Account</h1> *@
+@*     <br/> *@
+@* </div> *@
+@* *@
+@* <div class="container-fluid"> *@
+@*     <div class="row justify-content-center"> *@
+@*         <div class="col-5"> *@
+@*             <h4>Placed Bets</h4> *@
+@*             @for (var i = @tickets.Count - 1; i >= 0; i--) *@
+@*             { *@
+@*                 <div class="list-group"> *@
+@* *@
+@*                     @{ *@
+@*                         var status = "list-group-item-warning"; *@
+@*                         if (@tickets.ElementAt(i).isClosed) *@
+@*                         { *@
+@*                             if (@tickets.ElementAt(i).isWinner) *@
+@*                             { *@
+@*                                 status = "list-group-item-success"; *@
+@*                             } *@
+@*                             else *@
+@*                             { *@
+@*                                 status = "list-group-item-danger"; *@
+@*                             } *@
+@*                         } *@
+@*                     } *@
+@*                     <div class=@status> *@
+@*                         <span style="float: left"> *@
+@*                             <b>&nbsp;Ticket #@tickets.ElementAt(i).bettingTicketID</b> *@
+@*                         </span> *@
+@*                         <span style="float: right">@tickets.ElementAt(i).bettingTicketDate.ToString()&nbsp;</span> *@
+@*                     </div> *@
+@*                     @for (var j = 0; j < @tickets.ElementAt(i).bettingTicketBetsList.Count; j++) *@
+@*                     { *@
+@*                         <div class="list-group-item"> *@
+@*                             <span style="float: left"> *@
+@*                                 <b>@tickets.ElementAt(i).bettingTicketBetsList.ElementAt(j).bet.betName</b> *@
+@*                             </span> *@
+@*                             <span style="float: right"> *@
+@*                                 <b>@tickets.ElementAt(i).bettingTicketBetsList.ElementAt(j).bet.oddValue</b>&nbsp;&nbsp; *@
+@*                             </span><br/> *@
+@*                             @tickets.ElementAt(i).bettingTicketBetsList.ElementAt(j).bet.betType.betTypeName<br/> *@
+@*                             @tickets.ElementAt(i).bettingTicketBetsList.ElementAt(j).footballEvent.footballTeam0.footballTeamName -  *@
+@*                             @tickets.ElementAt(i).bettingTicketBetsList.ElementAt(j).footballEvent.footballTeam1.footballTeamName *@
+@*                         </div> *@
+@*                     } *@
+@*                     <div class="list-group-item"> *@
+@*                         <span style="float: left"> *@
+@*                             Total odds:&nbsp;<b>@tickets.ElementAt(i).CalculateOdds().ToString("0.00")</b> *@
+@*                         </span> *@
+@*                         <span style="float: right"> *@
+@*                             Sum:&nbsp;<b>@tickets.ElementAt(i).bettingTicketSum</b>&nbsp;&nbsp;&nbsp; *@
+@*                             Profit:&nbsp;<b>@tickets.ElementAt(i).CalculateProfit().ToString("0.00")</b> *@
+@*                         </span> *@
+@*                     </div> *@
+@*                 </div> *@
+@*                 <br/> *@
+@*             } *@
+@*         </div> *@
+@*         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *@
+@*         <div class="col-5"> *@
+@*             <h4><span style="float: right">Account balance: lei 50</span></h4> *@
+@*             <br/><br/> *@
+@*             <h5> Deposit money</h5> *@
+@*             <div class="row"> *@
+@*                 <div class="col"> *@
+@*                     <input type="text" class="form-control" placeholder="Sum"> *@
+@*                 </div> *@
+@*                 <div class="col"> *@
+@*                     <button type="button" class="btn btn-block btn-info">Confirm</button> *@
+@*                 </div> *@
+@*             </div> *@
+@*             <br/> *@
+@*             <h5> Withdraw money</h5> *@
+@*             <div class="row"> *@
+@*                 <div class="col"> *@
+@*                     <input type="text" class="form-control" placeholder="Sum"> *@
+@*                 </div> *@
+@*                 <div class="col"> *@
+@*                     <button type="button" class="btn btn-block btn-info">Confirm</button> *@
+@*                 </div> *@
+@*             </div> *@
+@*             <br/><br/> *@
+@*             <h4>Transaction History</h4><br/> *@
+@*             <div class="list-group"> *@
+@*                 @for (var i = @transactions.Count - 1; i >= 0; i--) *@
+@*                 { *@
+@*                     <div class="list-group-item"> *@
+@*                         <span style=float:left> *@
+@*                             @transactions.ElementAt(i).transactionDate.ToString("dd/MM/yy hh:mm") *@
+@*                         </span> *@
+@*                         <span style=float:right> *@
+@*                             @{ *@
+@*                                 var type = ""; *@
+@*                                 var sign = ""; *@
+@*                                 if (@transactions.ElementAt(i).transactionSum >= 0) *@
+@*                                 { *@
+@*                                     type = "color:green"; *@
+@*                                     sign = "+ lei"; *@
+@*                                 } *@
+@*                                 else *@
+@*                                 { *@
+@*                                     type = "color:red"; *@
+@*                                     sign = "- lei"; *@
+@*                                 } *@
+@*                             } *@
+@*                             <p style=@type>@sign @Math.Abs(@transactions.ElementAt(i).transactionSum)</p> *@
+@*                         </span> *@
+@*                     </div> *@
+@*                 } *@
+@*             </div> *@
+@*         </div> *@
+@*         *@
+@*     </div> *@
+@* </div> *@
