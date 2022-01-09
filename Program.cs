@@ -2,6 +2,7 @@ using System;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using TET_BET.Models;
+using TET_BET.Repositories;
 using TET_BET.Service;
 using TET_BET.Service.User;
 
@@ -13,6 +14,8 @@ namespace TET_BET
         {
             // asta da drumu la aplicatie, o comentam ca sa ne testam serviciile
             // CreateHostBuilder(args).Build().Run();
+            AccountRepository accountRepository= new AccountRepository();
+            
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
