@@ -13,11 +13,8 @@ namespace TET_BET.Repositories
             _dbContext = _genericRepositoryActions.GetAppDBContext();
         }
         
-        public void InsertNewUser(DBUser dbUser)
+        public void InsertUser(DBUser dbUser)
         {
-            AccountDetailsRepository accountDetailsRepository = new AccountDetailsRepository();
-            dbUser.accountDetailsID = accountDetailsRepository.InsertNewAccountAndReturnItsID();
-
             _dbContext.DBUser.Add(dbUser);
             _dbContext.SaveChanges();
         }
