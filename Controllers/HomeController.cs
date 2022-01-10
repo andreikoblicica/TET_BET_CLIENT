@@ -3,8 +3,10 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TET_BET.ControllersModels;
+using TET_BET.ControllersModels.FootballEventBetsModel;
 using TET_BET.ControllersModels.MainMenuModel;
 using TET_BET.Models;
+using TET_BET.Repositories;
 using TET_BET.Service.Events;
 using TET_BET.Service.User;
 
@@ -77,6 +79,9 @@ namespace TET_BET.Controllers
             FootballEvent footballEvent = new FootballEvent();
             MainMenuModel model = new MainMenuModel();
             model.MatchInfos = footballEvent.GetMainFootballEventsBet();
+            model.sportID = 1;
+            model.countryID = 0;
+            model.leagueID = 0;
 
             return View(model);
         }

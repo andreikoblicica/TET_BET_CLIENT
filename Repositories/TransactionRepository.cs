@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using TET_BET.Models;
 
 namespace TET_BET.Repositories
@@ -33,6 +34,11 @@ namespace TET_BET.Repositories
         public void Update(object objectToUpdate)
         {
             throw new System.NotImplementedException();
+        }
+        
+        public List<DBTransaction> GetTransactionsByAccountDetailsID(int accountDetailsID)
+        {
+            return _dbContext.DBTransaction.Where(e => e.accountDetailsID == accountDetailsID).ToList();
         }
     }
 }
