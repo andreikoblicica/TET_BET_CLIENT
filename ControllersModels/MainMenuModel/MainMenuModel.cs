@@ -5,6 +5,7 @@ namespace TET_BET.ControllersModels.MainMenuModel
 {
     public class MainMenuModel
     {
+        public DBUser user;
         public List<MatchInfo> MatchInfos { get; set; }
     }
 }

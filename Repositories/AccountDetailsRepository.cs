@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using TET_BET.Models;
 
 namespace TET_BET.Repositories
@@ -26,6 +28,13 @@ namespace TET_BET.Repositories
             _dbContext.SaveChanges();
 
             return dbAccountDetails.accountDetailsID;
+        }
+
+        public DBAccountDetails getAccountDetailsByID(int accountDetailsID)
+        {
+            var selected = _dbContext.DBAccountDetails
+                .Where(accountDetails => accountDetails.accountDetailsID == accountDetailsID).ToList();
+            return selected[0];
         }
     }
 }
