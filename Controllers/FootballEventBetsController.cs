@@ -17,7 +17,7 @@
 //                     {
 //                         sportName = "football"
 //                     },
-//                     bettingEventDate = DateTime.Now,
+//                     bettingEventDate = new DateTime(2022,01,02,19,30,00),
 //                     bettingEventLocation = "Stamford Bridge",
 //                     bettingEventStatus = new DBBettingEventStatus()
 //                     {
@@ -60,20 +60,22 @@
 //             List<DBBet> betsList = new List<DBBet>();
 //             List<DBBet> betsList2 = new List<DBBet>();
 //             List<DBBet> betsList3 = new List<DBBet>();
+//             List<DBBet> betsList4 = new List<DBBet>();
+//             List<DBBet> betsList5 = new List<DBBet>();
 //             betsList.Add(new DBBet()
 //             {
 //                 betName = "Home",
-//                 oddValue = (float) 1.5
+//                 oddValue = (float) 2.50
 //             });
 //             betsList.Add(new DBBet()
 //             {
 //                 betName = "Draw",
-//                 oddValue = (float) 3
+//                 oddValue = (float) 3.50
 //             });
 //             betsList.Add(new DBBet()
 //             {
 //                 betName = "Away",
-//                 oddValue = (float) 7.5
+//                 oddValue = (float) 2.70
 //             });
 //             betsList2.Add(new DBBet()
 //             {
@@ -105,6 +107,31 @@
 //                 betName = "3-0",
 //                 oddValue = (float) 6.5
 //             });
+//             betsList4.Add(new DBBet()
+//             {
+//                 betName = "Home",
+//                 oddValue = (float) 2.65
+//             });
+//             betsList4.Add(new DBBet()
+//             {
+//                 betName = "Draw",
+//                 oddValue = (float) 2.90
+//             });
+//             betsList4.Add(new DBBet()
+//             {
+//                 betName = "Away",
+//                 oddValue = (float) 2.55
+//             });
+//             betsList5.Add(new DBBet()
+//             {
+//                 betName = "Over 2.5",
+//                 oddValue = (float) 3.10
+//             });
+//             betsList5.Add(new DBBet()
+//             {
+//                 betName = "Under 2.5",
+//                 oddValue = (float) 1.45
+//             });
 //             List<DBBetType> bets = new List<DBBetType>();
 //             bets.Add(new DBBetType()
 //             {
@@ -120,6 +147,16 @@
 //             {
 //                 betTypeName = "Exact Score",
 //                 betsList = betsList3
+//             });
+//             bets.Add(new DBBetType()
+//             {
+//                 betTypeName = "First Half Winner",
+//                 betsList = betsList4
+//             });
+//             bets.Add(new DBBetType()
+//             {
+//                 betTypeName = "Goals Over/Under",
+//                 betsList = betsList5
 //             });
 //             return bets;
 //         }

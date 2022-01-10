@@ -16,5 +16,6 @@ namespace TET_BET.Models
         public DBAccountDetails accountDetails { get; set; }
         
         public bool isWinner{ get; set; }
+        public bool isClosed { get; set; }
     }
 }

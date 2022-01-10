@@ -13,7 +13,7 @@
 @*     <p>@footballEvent.eventt.bettingEventLocation, @footballEvent.eventt.bettingEventDate</p> *@
 @* </div> *@
 @* *@
-@* <div class="text-left"> *@
+@* <div class="container"> *@
 @*     @for (var i = 0; i < @bets.Count; i++) *@
 @*     { *@
 @*         <h4>@bets.ElementAt(i).betTypeName</h4> *@
@@ -21,11 +21,13 @@
 @*           @for (var j = 0; j < @bets.ElementAt(i).betsList.Count; j++) *@
 @*           { *@
 @*               <div class="col"> *@
-@*                   <button type="button" class="btn btn-info btn-lg btn-block"><span style="float:left;">@bets.ElementAt(i).betsList.ElementAt(j).betName</span><span style="float:right;"><b>@bets.ElementAt(i).betsList.ElementAt(j).oddValue</b></span> </button> *@
+@*                   <button id="" type="button" class="btn btn-info btn-lg btn-block"> *@
+@*                       <span style="float:left;">@bets.ElementAt(i).betsList.ElementAt(j).betName *@
+@*                       </span><span style="float:right;"><b>@bets.ElementAt(i).betsList.ElementAt(j).oddValue</b></span> *@
+@*                   </button> *@
 @*               </div> *@
 @*           } *@
 @*         </div>                                   *@
 @*     } *@
-@*      *@
 @* </div> *@
 @* *@
