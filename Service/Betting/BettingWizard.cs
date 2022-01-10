@@ -1,19 +1,40 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using TET_BET.Models;
+using TET_BET.Repositories;
 
 namespace TET_BET.Service.Betting
 {
     public class BettingWizard
     {
-        public List<DBFootballEvent> GetRecommendedBets(float intendedBettingAmount, float intendedWinAmount)
+        private DBFootballEventBetRepository _dbFootballEventBetRepository;
+
+        public BettingWizard()
         {
-            // TODO
-            // pe baza la cat ii de parior/conservator user-ul, alege-i o lista de pariuri mai mult sau mai putin sigure
-            // trebuie luat in considerare cat vrea sa parieze, castig asteptat
-            // (practic, cu cat vrea sa castige mai mult, cotele inmultite trebuie sa se aropie de cat zice el)
-            return null;
+            _dbFootballEventBetRepository = new DBFootballEventBetRepository();
         }
 
-        // poti crea cate functii vrei tu in clasa asta, toate se ocupa de recomandat de pariuri
+        public DBFootballEventBet GetRecommendedBets(float intendedBettingAmount, float intendedWinAmount)
+        {
+
+            float oddValue = intendedWinAmount / intendedBettingAmount;
+            List<DBFootballEventBet> footballEventBets = _dbFootballEventBetRepository
+                .GetFootballEventBetsInDateInterval(DateTime.Now,
+                    DateTime.Now.AddDays(10)).ToList();
+            List<DBFootballEventBet> listToReturn = new List<DBFootballEventBet>();
+            foreach (var footballEventBet in footballEventBets)
+            {
+                if (footballEventBet.oddValue > oddValue - 0.5 && footballEventBet.oddValue < oddValue + 0.5)
+                {
+                    listToReturn.Add(footballEventBet);
+                }
+            }
+
+            Random random = new Random();
+            DBFootballEventBet eventBet = listToReturn[random.Next(listToReturn.Count)];
+            return eventBet;
+        }
+
     }
 }
