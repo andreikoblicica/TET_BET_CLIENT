@@ -31,6 +31,13 @@ namespace TET_BET.Repositories
             return dbAccountDetails.accountDetailsID;
         }
 
+        public DBAccountDetails getAccountDetailsByID(int accountDetailsID)
+        {
+            var selected = _dbContext.DBAccountDetails
+                .Where(accountDetails => accountDetails.accountDetailsID == accountDetailsID).ToList();
+            return selected[0];
+        }
+
         public float getBalanceByAccountDetailsID(int accountDetailsID)
         {
             return _dbContext.DBAccountDetails.Where(e => e.accountDetailsID == accountDetailsID).ToList().ElementAt(0)
