@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TET_BET.ControllersModels.FootballEventBetsModel;
 using TET_BET.ControllersModels.MainMenuModel;
 using TET_BET.Models;
 using TET_BET.Repositories;
@@ -57,5 +58,41 @@ namespace TET_BET.Service.Events
 
             return matchesInfos;
         }
+
+        public List<BetType> GetBetTypes(int footballEventID)
+        {
+            List<BetType> bets = new List<BetType>();
+            List<IGrouping<string, DBFootballEventBet>> betTypes =
+                _dbFootballEventBetRepository.GetFootballEventBetTypesForEventId(footballEventID);
+            foreach (var bet in betTypes)
+            {
+                 List<FootballEventBetsControllerBet> betNameBetValueTuples = new List<FootballEventBetsControllerBet>();
+                for (int i = 0; i < bet.Count(); i++)
+                {
+                    betNameBetValueTuples.Add(new FootballEventBetsControllerBet()
+                    {
+                        betName = bet.ElementAt(i).bet.betName,
+                        oddValue = bet.ElementAt(i).oddValue.ToString(),
+                        footballEventBetID = bet.ElementAt(i).bet.betID.ToString()
+                    });
+                }
+                bets.Add(new BetType()
+                {
+                    betTypeName = bet.Key,
+                    _betNameBetValueTuples = betNameBetValueTuples
+                });
+            }
+
+            return bets;
+        }
+
+        public DBFootballEvent GetEventByID(int footballEventID)
+        {
+            return _dbFootballEventBetRepository.GetFootballEventByID(footballEventID);
+        }
+        
+        
+        
+        
     }
 }
