@@ -1,53 +1,148 @@
-@* @model dynamic *@
-@* *@
-@* @using TET_BET.Models *@
-@* @{ *@
-@*     var matches = ViewData["matches"] as List<DBFootballEvent>; *@
-@* } *@
-@* *@
-@* <div class="container-fluid">   *@
-@*     <div class="row"> *@
-@*         <div class="col-2"> *@
-@*             <h5>Filter options</h5> *@
-@*         </div> *@
-@*         <div class="col-8"> *@
-@*             <h3>Matches</h3>   *@
-@*             <div class="list-group">   *@
-@*                 @for (var i = 0; i < @matches.Count; i++) *@
-@*                 { *@
-@*                     <div class="list-group-item"> *@
-@*   *@
-@*                             <span style="float:left;"> *@
-@*                                 @matches.ElementAt(i).eventt.bettingEventDate.Hour:@matches.ElementAt(i).eventt.bettingEventDate.Minute *@
-@*                                 @matches.ElementAt(i).eventt.bettingEventDate.Day/@matches.ElementAt(i).eventt.bettingEventDate.Month *@
-@*                                 &nbsp;&nbsp; *@
-@*                             </span>  *@
-@*                             <span style="float:left;"> *@
-@*                                 <a href="#"> *@
-@*                                     @matches.ElementAt(i).footballTeam0.footballTeamName - @matches.ElementAt(i).footballTeam1.footballTeamName *@
-@*                                 </a> *@
-@*                             </span> *@
-@*                             <span style="float:right;"> *@
-@*                                 <div class="row"> *@
-@*                                     <div class="col"><button type="button" class="btn btn-info">1&nbsp;&nbsp;<b>3.32</b></button></div> *@
-@*                                     <div class="col"><button type="button" class="btn btn-info">X&nbsp;&nbsp;<b>4.13</b></button></div> *@
-@*                                     <div class="col"><button type="button" class="btn btn-info">2&nbsp;&nbsp;<b>1.75</b></button></div> *@
-@*                                 </div> *@
-@*                             </span> *@
-@*                     </div>     *@
-@*                 } *@
-@* *@
-@*             </div>   *@
-@*         </div> *@
-@*         <div class="col-2"> *@
-@*             <h5>Current bet</h5> *@
-@*             <div class="list-group"> *@
-@*                 <div class="list-group-item"> *@
-@*                      *@
-@*                 </div> *@
-@*             </div> *@
-@*             </div> *@
-@*     @Html.ActionLink("Match Example", "FootballEventBets", "FootballEventBets", null, new {@class = "page-scroll"}) *@
-@* </div></div> *@
-@* *@
-@* *@
+@using TET_BET.ControllersModels
+@using TET_BET.ControllersModels.MainMenuModel
+@model TET_BET.ControllersModels.MainMenuModel.MainMenuModel
+
+@{
+    var matches = ViewData["matches"] as List<DBFootballEvent>;
+    var ticket = ViewData["ticket"] as DBBettingTicket;
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <br/><br/>
+            <h5>Filter options</h5>
+            <div class="dropdown">
+                <button class="btn btn-light btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                    Sport
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Football</a>
+                    <a class="dropdown-item" href="#">Basketball</a>
+                    <a class="dropdown-item" href="#">Tennis</a>
+                </div>
+            </div>
+            <br/>
+            <div class="dropdown">
+                <button class="btn btn-light btn-block dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Country
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">England</a>
+                    <a class="dropdown-item" href="#">Spain</a>
+                    <a class="dropdown-item" href="#">Germany</a>
+                    <a class="dropdown-item" href="#">France</a>
+                    <a class="dropdown-item" href="#">Italy</a>
+                </div>
+            </div>
+            <br/>
+            <div class="dropdown">
+                <button class="btn btn-light btn-block dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    League
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Premier League</a>
+                    <a class="dropdown-item" href="#">La Liga</a>
+                    <a class="dropdown-item" href="#">Bundesliga</a>
+                    <a class="dropdown-item" href="#">Ligue 1</a>
+                    <a class="dropdown-item" href="#">Serie A</a>
+                </div>
+            </div><br/>
+            <button class="btn btn-info btn-block" type="button" id="applyButton">Apply</button>
+        </div>
+        <div class="col-7">
+
+            <h3>Matches</h3>
+            <div class="list-group">
+
+                @foreach (MatchInfo matchInfo in Model.MatchInfos)
+                {
+                    <div class="list-group-item">
+
+                        <span style="float:left;">
+                            @* @dbFootballEventBet.footballEvent.eventt.bettingEventDate.ToString(); *@
+                            @matchInfo._dateTime
+                            &nbsp;&nbsp;
+                        </span>
+
+                        <span style="float:left;">
+                            <a href="#">
+                                @* @dbFootballEventBet.footballEvent.footballTeam0.footballTeamName - @dbFootballEventBet.footballEvent.footballTeam1.footballTeamName *@
+                                @matchInfo._teamName0 - @matchInfo._teamName1
+                            </a>
+                        </span>
+
+                        <span style="float:right;">
+                            <div class="row">
+
+                                <div class="col">
+                                    <button type="button" class="btn btn-info">@matchInfo._betNameBetValueTuples[0].Item1&nbsp;&nbsp;<b>@matchInfo._betNameBetValueTuples[0].Item2</b></button>
+                                </div>
+
+                                <div class="col">
+                                    @* <button type="button" class="btn btn-info">X&nbsp;&nbsp;<b>@dbFootballEventBet.oddValue</b></button> *@
+                                    <button type="button" class="btn btn-info">@matchInfo._betNameBetValueTuples[1].Item1&nbsp;&nbsp;<b>@matchInfo._betNameBetValueTuples[1].Item2</b></button>
+                                </div>
+
+                                <div class="col">
+                                    @* <button type="button" class="btn btn-info">2&nbsp;&nbsp;<b>@dbFootballEventBet.oddValue</b></button> *@
+                                    <button type="button" class="btn btn-info">@matchInfo._betNameBetValueTuples[2].Item1&nbsp;&nbsp;<b>@matchInfo._betNameBetValueTuples[2].Item2</b></button>
+                                </div>
+
+                            </div>
+                        </span>
+                    </div>
+                }
+
+            </div>
+
+            @* @Html.ActionLink("Match Example", "FootballEventBets", "FootballEventBets", null, new {@class = "page-scroll"}) *@
+        </div>
+
+        @* <div class="col-3"> *@
+        @*     <span style="float: right"> *@
+        @*         <h6>Account balance: lei 50</h6> *@
+        @*     </span> *@
+        @*     <br/><br/> *@
+        @*     <h5>Current bet</h5> *@
+        @*     <div class="list-group"> *@
+        @*         @for (var i = 0; i < @ticket.bettingTicketBetsList.Count; i++) *@
+        @*         { *@
+        @*             <div class="list-group-item"> *@
+        @*                 <span style="float: left"> *@
+        @*                     <b>@ticket.bettingTicketBetsList.ElementAt(i).bet.betName</b> *@
+        @*                 </span> *@
+        @*                 <span style="float: right"> *@
+        @*                     <b>@ticket.bettingTicketBetsList.ElementAt(i).bet.oddValue</b>&nbsp;&nbsp; *@
+        @*                     <button type="button" class="close" aria-label="Close"> *@
+        @*                         <span aria-hidden="true">&times;</span> *@
+        @*                     </button> *@
+        @*                 </span><br/> *@
+        @*                 @ticket.bettingTicketBetsList.ElementAt(i).bet.betType.betTypeName<br/> *@
+        @*                 @ticket.bettingTicketBetsList.ElementAt(i).footballEvent.footballTeam0.footballTeamName - *@
+        @*                 @ticket.bettingTicketBetsList.ElementAt(i).footballEvent.footballTeam1.footballTeamName *@
+        @*             </div> *@
+        @*         } *@
+        @*         <div class="list-group-item"> *@
+        @*             Total odds: <b>@ticket.CalculateOdds().ToString("0.00")</b> *@
+        @*         </div> *@
+        @* *@
+        @*     </div> *@
+        @*     <br/> *@
+        @*     <div class="row"> *@
+        @*         <div class="col"> *@
+        @*             <input type="text" class="form-control" placeholder="Sum"> *@
+        @*         </div> *@
+        @*         <div class="col"> *@
+        @*             <button type="button" class="btn btn-block btn-info">Place bet</button> *@
+        @*         </div> *@
+        @* *@
+        @*     </div> *@
+        @* </div> *@
+
+    </div>
+</div>

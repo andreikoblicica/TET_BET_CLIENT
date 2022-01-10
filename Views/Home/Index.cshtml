@@ -1,24 +1,36 @@
-﻿@{
+﻿@model TET_BET.ControllersModels.LoginModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
 <div class="container">
-    <div class="row">
-        <div class="col-sm">
-            One of three columns
-        </div>
-        <div class="col-sm">
-            One of three columns
-        </div>
-        <div class="col-sm">
-            One of three columns
-        </div>
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
     </div>
-    @* <a href="../../Pages/FootballEventBets/FootballEventBets.cshtml"> sadsdsadsadsfsdf</a> *@
-    @Html.ActionLink("Log In","MainMenu","MainMenu", null, new { @class = "page-scroll" })
+    <br/><br/>
+
+    <form asp-action="SignIn" asp-controller="Home">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="email" asp-for="email"><br/>
+                <input type="password" class="form-control" placeholder="password" asp-for="password"><br/>
+
+                <div class="row">
+
+                    <div class="col">
+                        <button type="button" class="btn btn-block btn-info">
+                            aaaaaa
+                        </button>
+                    </div>
+
+                    <div class="col">
+                        <button type="submit" class="btn btn-block btn-info">Sign Up</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </form>
 </div>

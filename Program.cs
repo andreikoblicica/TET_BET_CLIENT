@@ -12,7 +12,7 @@ namespace TET_BET
         public static void Main(string[] args)
         {
             // asta da drumu la aplicatie, o comentam ca sa ne testam serviciile
-            // CreateHostBuilder(args).Build().Run();
+            CreateHostBuilder(args).Build().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
