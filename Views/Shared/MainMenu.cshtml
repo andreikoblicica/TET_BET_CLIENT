@@ -2,6 +2,7 @@
 @using TET_BET.ControllersModels.MainMenuModel
 @model TET_BET.ControllersModels.MainMenuModel.MainMenuModel
 
+
 @{
     var matches = ViewData["matches"] as List<DBFootballEvent>;
     var ticket = ViewData["ticket"] as DBBettingTicket;
@@ -52,7 +53,7 @@
                     <a class="dropdown-item" href="#">Serie A</a>
                 </div>
             </div><br/>
-            <button class="btn btn-info btn-block" type="button" id="applyButton">Apply</button>
+            <button class="btn btn-info btn-block" type="button" id="applyButton" onclick="location.href='@Url.Action("MainMenu", "MainMenu")'">Apply</button>
         </div>
         <div class="col-7">
 

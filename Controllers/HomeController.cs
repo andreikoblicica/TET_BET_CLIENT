@@ -51,11 +51,11 @@ namespace TET_BET.Controllers
            
           
             FootballEvent footballEvent = new FootballEvent();
-
-
             MainMenuModel model = new MainMenuModel();
             model.MatchInfos = footballEvent.GetMainFootballEventsBet();
-            
+            model.sportID = 1;
+            model.countryID = 0;
+            model.leagueID = 0;
             return View(model);
         }
     }

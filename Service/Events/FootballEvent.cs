@@ -22,8 +22,20 @@ namespace TET_BET.Service.Events
             List<DBFootballEventBet> allFootballEventsBets =
                 _dbFootballEventBetRepository.GetFootballEventBetsInDateInterval(DateTime.Now,
                     DateTime.Now.AddDays(10)).ToList();
+            return CreateMatchInfosFromBetsList(allFootballEventsBets);
+        }
+        
+        public List<MatchInfo> GetFilteredFootballEventsBet(int sportID, int countryID, int leagueID)
+        {
+            List<DBFootballEventBet> filteredFootballEventsBets =
+                _dbFootballEventBetRepository.GetFootballEventBetsWithFilters(sportID,countryID,leagueID).ToList();
 
-            List<DBFootballEventBet> footballEventsBetsWithMatchWinner = allFootballEventsBets
+            return CreateMatchInfosFromBetsList(filteredFootballEventsBets);
+        }
+        
+        private List<MatchInfo> CreateMatchInfosFromBetsList( List<DBFootballEventBet> betsList)
+        {
+            List<DBFootballEventBet> footballEventsBetsWithMatchWinner = betsList
                 .Where(currentEvent => currentEvent.bet.betType.betTypeName == "Match Winner")
                 .ToList();
 
@@ -55,9 +67,10 @@ namespace TET_BET.Service.Events
                     matchesInfos.Add(matchInfoToInsert);
                 }
             });
-
             return matchesInfos;
         }
+        
+        
 
         public List<BetType> GetBetTypes(int footballEventID)
         {
@@ -90,6 +103,11 @@ namespace TET_BET.Service.Events
         {
             return _dbFootballEventBetRepository.GetFootballEventByID(footballEventID);
         }
+
+     
+
+
+        
         
         
         
