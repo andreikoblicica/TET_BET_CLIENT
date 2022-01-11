@@ -1,33 +1,32 @@
-@* @model dynamic *@
-@* *@
-@* @using TET_BET.Models *@
-@* @{ *@
-@*     ViewBag.Title = "title"; *@
-@*     Layout = "_Layout"; *@
-@*     var footballEvent = ViewData["football_event"] as DBFootballEvent; *@
-@*     var bets = ViewData["bets_list"] as List<DBBetType>; *@
-@* } *@
-@* *@
-@* <div class="text-center"> *@
-@*     <h1>@footballEvent.footballTeam0.footballTeamName - @footballEvent.footballTeam1.footballTeamName</h1> *@
-@*     <p>@footballEvent.eventt.bettingEventLocation, @footballEvent.eventt.bettingEventDate</p> *@
-@* </div> *@
-@* *@
-@* <div class="container"> *@
-@*     @for (var i = 0; i < @bets.Count; i++) *@
-@*     { *@
-@*         <h4>@bets.ElementAt(i).betTypeName</h4> *@
-@*         <div class="row"> *@
-@*           @for (var j = 0; j < @bets.ElementAt(i).betsList.Count; j++) *@
-@*           { *@
-@*               <div class="col"> *@
-@*                   <button id="" type="button" class="btn btn-info btn-lg btn-block"> *@
-@*                       <span style="float:left;">@bets.ElementAt(i).betsList.ElementAt(j).betName *@
-@*                       </span><span style="float:right;"><b>@bets.ElementAt(i).betsList.ElementAt(j).oddValue</b></span> *@
-@*                   </button> *@
-@*               </div> *@
-@*           } *@
-@*         </div>                                   *@
-@*     } *@
-@* </div> *@
-@* *@
+@using TET_BET.ControllersModels.FootballEventBetsModel
+@model TET_BET.ControllersModels.FootballEventBetsModel.FootballEventBetsModel
+
+@using TET_BET.Models
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="text-center">
+    <h1>@Model.teamName0 - @Model.teamName1</h1>
+    <p>@Model.bettingEventLocation, @Model.bettingEventDate</p>
+</div>
+
+<div class="container">
+    @foreach(var betType in Model.betTypes)
+    {
+        <h4>@betType.betTypeName</h4>
+        <div class="row">
+          @foreach(var bet in betType._betNameBetValueTuples)
+          {
+              <div class="col">
+                  <button value=@bet.footballEventBetID type="button" class="btn btn-info btn-lg btn-block">
+                      <span style="float:left;">@bet.betName
+                      </span><span style="float:right;"><b>@bet.oddValue</b></span>
+                  </button>
+              </div>
+          }
+        </div>
+    }
+</div>
+

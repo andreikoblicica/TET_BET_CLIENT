@@ -1,6 +1,9 @@
 using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using TET_BET.Models;
 
 namespace TET_BET.Repositories
@@ -35,5 +38,22 @@ namespace TET_BET.Repositories
             return _dbContext.DBAccountDetails.Where(account => account.user.userID == ID)
                 .Include(account => account.user).ToList()[0];
         }
+
+        public DBAccountDetails getAccountDetailsByID(int accountDetailsID)
+        {
+            var selected = _dbContext.DBAccountDetails
+                .Where(accountDetails => accountDetails.accountDetailsID == accountDetailsID).ToList();
+            return selected[0];
+        }
+
+        public float getBalanceByAccountDetailsID(int accountDetailsID)
+        {
+            return _dbContext.DBAccountDetails.Where(e => e.accountDetailsID == accountDetailsID).ToList().ElementAt(0)
+                .accountBalance;
+        }
+
+       
+        
+    
     }
 }
