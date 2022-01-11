@@ -16,7 +16,7 @@ namespace TET_BET.Repositories
 
         public void Insert(object objectToInsert)
         {
-            _dbContext.DBEventt.Add((DBEventt) objectToInsert);
+            _dbContext.DBBettingTicket.Add((DBBettingTicket) objectToInsert);
             _dbContext.SaveChanges();
         }
 

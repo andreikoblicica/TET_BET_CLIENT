@@ -1,4 +1,6 @@
 using System;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using TET_BET.Models;
 
 namespace TET_BET.Repositories
@@ -26,6 +28,12 @@ namespace TET_BET.Repositories
             _dbContext.SaveChanges();
 
             return dbAccountDetails.accountDetailsID;
+        }
+
+        public DBAccountDetails GetByID(int ID)
+        {
+            return _dbContext.DBAccountDetails.Where(account => account.user.userID == ID)
+                .Include(account => account.user).ToList()[0];
         }
     }
 }
