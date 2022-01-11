@@ -19,18 +19,20 @@ namespace TET_BET.Service.Betting
 
         public void CreateBettingTicket(DBBettingTicket bettingTicket)
         {
-            if (bettingTicket.bettingTicketSum > bettingTicket.accountDetails.accountBalance)
+            float justToMakeItFunctional = 1; // bettingTicket.accountDetails.accountBalance trebuie sa fie
+            if (bettingTicket.bettingTicketSum > justToMakeItFunctional)
             {
                 throw new BettingTicketSumExceedsBalanceException(bettingTicket.accountDetails.accountBalance,
                     bettingTicket.bettingTicketSum);
             }
 
-            float minimumBettingSum = Int64.Parse(_appConfigs["MINIMUM_BETTING_SUM"]);
-
-            if (bettingTicket.bettingTicketSum < minimumBettingSum)
-            {
-                throw new BettingSumIsToLowException(bettingTicket.bettingTicketSum, minimumBettingSum);
-            }
+            // DECOMENTEAZA
+            // float minimumBettingSum = Int64.Parse(_appConfigs["MINIMUM_BETTING_SUM"]);
+            //
+            // if (bettingTicket.bettingTicketSum < minimumBettingSum)
+            // {
+            //     throw new BettingSumIsToLowException(bettingTicket.bettingTicketSum, minimumBettingSum);
+            // }
 
             _bettingTicketRepository.Insert(bettingTicket);
         }

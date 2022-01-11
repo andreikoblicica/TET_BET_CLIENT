@@ -48,22 +48,31 @@ namespace TET_BET.Service.Events
                 string team1Name = footballEventBets.footballEvent.footballTeam1.footballTeamName;
 
                 MatchInfo foundMatchInfo = matchesInfos.FirstOrDefault(matchInfo =>
-                    matchInfo._teamName0 == team0Name && matchInfo._teamName1 == team1Name);
+                    matchInfo.TeamName0 == team0Name && matchInfo.TeamName1 == team1Name);
 
                 if (foundMatchInfo != null)
                 {
-                    foundMatchInfo._betNameBetValueTuples.Add((footballEventBets.bet.betName,
-                        footballEventBets.oddValue.ToString()));
+                    MatchesListBet matchesListBet = new MatchesListBet();
+                    matchesListBet.betName = footballEventBets.bet.betName;
+                    matchesListBet.oddValue = footballEventBets.oddValue.ToString();
+                    matchesListBet.footballEventBetID = footballEventBets.footballEventBetID.ToString();
+                    
+                    foundMatchInfo.HomeControllerBets.Add(matchesListBet);
                 }
                 else
                 {
                     matchInfoToInsert = new MatchInfo();
-                    matchInfoToInsert._dateTime = footballEventBets.footballEvent.eventt.bettingEventDate;
-                    matchInfoToInsert._teamName0 = team0Name;
-                    matchInfoToInsert._teamName1 = team1Name;
-                    matchInfoToInsert._betNameBetValueTuples.Add((footballEventBets.bet.betName,
-                        footballEventBets.oddValue.ToString()));
+                    matchInfoToInsert.DateTime = footballEventBets.footballEvent.eventt.bettingEventDate;
+                    matchInfoToInsert.TeamName0 = team0Name;
+                    matchInfoToInsert.TeamName1 = team1Name;
 
+                    MatchesListBet matchesListBet = new MatchesListBet();
+                    matchesListBet.betName = footballEventBets.bet.betName;
+                    matchesListBet.oddValue = footballEventBets.oddValue.ToString();
+                    matchesListBet.footballEventBetID = footballEventBets.footballEventBetID.ToString();
+                    
+                    matchInfoToInsert.HomeControllerBets.Add(matchesListBet);
+                    
                     matchesInfos.Add(matchInfoToInsert);
                 }
             });

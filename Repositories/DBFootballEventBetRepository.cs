@@ -87,6 +87,17 @@ namespace TET_BET.Repositories
         
         
 
+        public DBFootballEventBet GetByID(int ID)
+        {
+            List<DBFootballEventBet> selectedFootballEventBets = _dbContext.DBFootballEventBet
+                .Where(footballEventBet => footballEventBet.footballEventBetID == ID)
+                .Include(footballEventBet => footballEventBet.footballEvent.footballTeam0)
+                .Include(footballEventBet => footballEventBet.footballEvent.footballTeam1)
+                .Include(footballEventBet => footballEventBet.bet.betType).ToList();
+
+            return selectedFootballEventBets[0];
+        }
+
         public void Insert(object objectToInsert)
         {
             throw new System.NotImplementedException();

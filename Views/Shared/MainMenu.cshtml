@@ -1,4 +1,5 @@
-@using TET_BET.ControllersModels
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+
 @using TET_BET.ControllersModels.MainMenuModel
 @model TET_BET.ControllersModels.MainMenuModel.MainMenuModel
 
@@ -7,7 +8,6 @@
     var matches = ViewData["matches"] as List<DBFootballEvent>;
     var ticket = ViewData["ticket"] as DBBettingTicket;
 }
-
 
 <div class="container-fluid">
     <div class="row">
@@ -66,14 +66,14 @@
 
                         <span style="float:left;">
                             @* @dbFootballEventBet.footballEvent.eventt.bettingEventDate.ToString(); *@
-                            @matchInfo._dateTime
+                            @matchInfo.DateTime
                             &nbsp;&nbsp;
                         </span>
 
                         <span style="float:left;">
                             <a href="#">
                                 @* @dbFootballEventBet.footballEvent.footballTeam0.footballTeamName - @dbFootballEventBet.footballEvent.footballTeam1.footballTeamName *@
-                                @matchInfo._teamName0 - @matchInfo._teamName1
+                                @matchInfo.TeamName0 - @matchInfo.TeamName1
                             </a>
                         </span>
 
@@ -81,17 +81,17 @@
                             <div class="row">
 
                                 <div class="col">
-                                    <button type="button" class="btn btn-info">@matchInfo._betNameBetValueTuples[0].Item1&nbsp;&nbsp;<b>@matchInfo._betNameBetValueTuples[0].Item2</b></button>
+                                    <button type="button" class="btn btn-info place-bet" value="@matchInfo.HomeControllerBets[0].footballEventBetID">@matchInfo.HomeControllerBets[0].betName&nbsp;&nbsp;<b>@matchInfo.HomeControllerBets[0].oddValue</b></button>
                                 </div>
 
                                 <div class="col">
                                     @* <button type="button" class="btn btn-info">X&nbsp;&nbsp;<b>@dbFootballEventBet.oddValue</b></button> *@
-                                    <button type="button" class="btn btn-info">@matchInfo._betNameBetValueTuples[1].Item1&nbsp;&nbsp;<b>@matchInfo._betNameBetValueTuples[1].Item2</b></button>
+                                    <button type="button" class="btn btn-info place-bet" value="@matchInfo.HomeControllerBets[1].footballEventBetID">@matchInfo.HomeControllerBets[1].betName&nbsp;&nbsp;<b>@matchInfo.HomeControllerBets[1].oddValue</b></button>
                                 </div>
 
                                 <div class="col">
                                     @* <button type="button" class="btn btn-info">2&nbsp;&nbsp;<b>@dbFootballEventBet.oddValue</b></button> *@
-                                    <button type="button" class="btn btn-info">@matchInfo._betNameBetValueTuples[2].Item1&nbsp;&nbsp;<b>@matchInfo._betNameBetValueTuples[2].Item2</b></button>
+                                    <button type="button" class="btn btn-info place-bet" value="@matchInfo.HomeControllerBets[2].footballEventBetID">@matchInfo.HomeControllerBets[2].betName&nbsp;&nbsp;<b>@matchInfo.HomeControllerBets[2].oddValue</b></button>
                                 </div>
 
                             </div>
@@ -104,46 +104,152 @@
              @Html.ActionLink("Match Example", "FootballEventBets", "FootballEventBets", null, new {@class = "page-scroll"}) 
         </div>
 
-        @* <div class="col-3"> *@
-        @*     <span style="float: right"> *@
-        @*         <h6>Account balance: lei 50</h6> *@
-        @*     </span> *@
-        @*     <br/><br/> *@
-        @*     <h5>Current bet</h5> *@
-        @*     <div class="list-group"> *@
-        @*         @for (var i = 0; i < @ticket.bettingTicketBetsList.Count; i++) *@
-        @*         { *@
-        @*             <div class="list-group-item"> *@
-        @*                 <span style="float: left"> *@
-        @*                     <b>@ticket.bettingTicketBetsList.ElementAt(i).bet.betName</b> *@
-        @*                 </span> *@
-        @*                 <span style="float: right"> *@
-        @*                     <b>@ticket.bettingTicketBetsList.ElementAt(i).bet.oddValue</b>&nbsp;&nbsp; *@
-        @*                     <button type="button" class="close" aria-label="Close"> *@
-        @*                         <span aria-hidden="true">&times;</span> *@
-        @*                     </button> *@
-        @*                 </span><br/> *@
-        @*                 @ticket.bettingTicketBetsList.ElementAt(i).bet.betType.betTypeName<br/> *@
-        @*                 @ticket.bettingTicketBetsList.ElementAt(i).footballEvent.footballTeam0.footballTeamName - *@
-        @*                 @ticket.bettingTicketBetsList.ElementAt(i).footballEvent.footballTeam1.footballTeamName *@
-        @*             </div> *@
-        @*         } *@
-        @*         <div class="list-group-item"> *@
-        @*             Total odds: <b>@ticket.CalculateOdds().ToString("0.00")</b> *@
-        @*         </div> *@
-        @* *@
-        @*     </div> *@
-        @*     <br/> *@
-        @*     <div class="row"> *@
-        @*         <div class="col"> *@
-        @*             <input type="text" class="form-control" placeholder="Sum"> *@
-        @*         </div> *@
-        @*         <div class="col"> *@
-        @*             <button type="button" class="btn btn-block btn-info">Place bet</button> *@
-        @*         </div> *@
-        @* *@
-        @*     </div> *@
-        @* </div> *@
+        <div class="col-3">
+            <span style="float: right">
+                <h6>Account balance: lei 50</h6>
+            </span>
+            <br/><br/>
+            <h5>Current bet</h5>
+            <div class="list-group betting-ticket-list-group">
+
+                <div class="list-group-item" id="123">
+
+                    @if (Model.BettingTicketBetList != null)
+                    {
+                        @foreach (BettingTicketBetModel bet in Model.BettingTicketBetList)
+                        {
+                            <span style="float: left">
+                                <b>@bet.BetName</b>
+                            </span>
+                            <span style="float: right">
+                                <b>@bet.OddValue</b>&nbsp;&nbsp;
+                                <button type="button" class="close deleteBet" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </span>
+                            <br>
+                            @bet.BetTypeName
+                            <br>
+                            @bet.Team0Name @bet.Team1Name
+                        }
+                    }
+
+                </div>
+
+                @* <div class="list-group-item"> *@
+                @*     Total odds: 0 *@
+                @* </div> *@
+
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col">
+                    <input id="bettingTicketSum" type="text" class="form-control" placeholder="Sum" value="1">
+                </div>
+                <div class="col">
+                    <button type="button" id="placeBettingTicket" class="btn btn-block btn-info">Place betting ticket</button>
+                </div>
+
+            </div>
+        </div>
 
     </div>
 </div>
+
+<script>
+
+$(document).ready(function () {
+    
+    
+$(".place-bet").click(function(){
+        
+        let $this = $(this);
+        let footballEventBetID = $this.val();
+         $.ajax({  
+           type: "GET",  
+           url: "/Home/AddBetOnTicketAndGetFootballEventBetIDInfoAjax",  
+           data: {footballEventBetID: footballEventBetID},  
+           contentType: "application/json; charset=utf-8",  
+           dataType: "json",  
+
+           success: function (response) {   
+                $('.betting-ticket-list-group').append('<li class="list-group-item" id=' + response.FootballEventBetID +'><span style="float: left"><b>' + 
+                response.BetName + '</b></span><span style="float: right"><b>' + response.OddValue + '</b>&nbsp;&nbsp;' +
+                 '<button type="button" class="close deleteBet" aria-label="Close" value=' + 
+                 response.FootballEventBetID + '><span aria-hidden="true">&times;</span></button></span><br>' + 
+                 response.BetTypeName + '<br>' + response.Team0Name + '-' + response.Team1Name +  '</div></li>');
+           },            
+           failure: function () {                  
+               alert("Unexpected error");
+           }  
+         });  
+    });
+
+    $(".deleteBet").click(function (){
+
+          let $this = $(this);
+          let footballEventBetID = $this.val();
+
+         $.ajax({  
+           type: "GET",  
+           url: "/Home/DeleteBetFromTicketAjax",  
+           data: {footballEventBetID: footballEventBetID},  
+           contentType: "application/json; charset=utf-8",  
+           dataType: "json",  
+
+           success: function () {   
+                 $("#123").remove();
+           },            
+           failure: function () {                  
+               alert("Unexpected error");
+           }  
+         });  
+    });
+    
+    $(".betting-ticket-list-group").on("click",".deleteBet", function(){
+        
+          let $this = $(this);
+          let footballEventBetID = $this.val();
+
+         $.ajax({  
+           type: "GET",  
+           url: "/Home/DeleteBetFromTicketAjax",  
+           data: {footballEventBetID: footballEventBetID},  
+           contentType: "application/json; charset=utf-8",  
+           dataType: "json",  
+
+           success: function () {   
+               
+                 // $("#+"+footballEventBetID +"").remove();
+           },            
+           failure: function () {                  
+               alert("Unexpected error");
+           }  
+         });  
+    });
+    
+        $("#placeBettingTicket").click(function (){
+    
+            let bettingTicketSum = $("#bettingTicketSum").val();
+            
+             $.ajax({  
+               type: "GET",  
+               data: {bettingTicketSum: bettingTicketSum},  
+               url: "/Home/SubmitBettingTicketAjax",  
+               contentType: "application/json; charset=utf-8",  
+               dataType: "json",  
+    
+               success: function () {   
+                    
+               },            
+               failure: function () {                  
+                   alert("Unexpected error");
+               }  
+             });  
+        });
+});
+
+
+
+
+</script>
